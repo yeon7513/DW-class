@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 버블링(Bubbling)과 캡쳐링(Capturing)</title>
+    <link rel="stylesheet" href="./css/6_bubbling.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script defer src="./js/6_bubbling.js"></script>
+  </head>
+  <!-- <body onclick="alert('body 태그 이벤트 핸들러')"> -->
+  <body>
+    <!-- 
+      ** 이벤트 버블링 **
+      - 이벤트 버블링은 이벤트가 가장 깊은 요소에서 발생한다.
+      - 해당 요소의 부모 요소를 거쳐 최상위 요소까지 전파되는 방식
+      - 거의 모든 이벤트는 버블링 된다. 
+      - 버블링이 되지 않는 것들 (Non-Bubbling Events)
+      => focus, blur : 포커스가 특정 요소로 이동할 때 발생하는 이벤트이기 때문에 트리 구조를 통해 전파되는 것이 아닌, 특정 요소에만 국한되기 때문
+      => load : 주로 문서나 이미지가 완전히 로드되었을 때 발생
+    -->
+    <!-- <div class="bubbling1" onclick="alert('div에 할당한 핸들러')">
+      <em>
+        <code>EM</code>을 클릭했는데도 <code>DIV</code>에 할당한 핸들러가
+        동작합니다.
+      </em>
+    </div> -->
+    <form class="bubbling2" onclick="alert('form')">
+      FORM
+      <div onclick="alert('div')">
+        DIV
+        <p onclick="alert('p')">P</p>
+      </div>
+    </form>
+    <!--
+      !! 위 코드 설명
+      1. p 태그를 클릭하면 할당돤 onclick 핸들러가 동작한다.
+      2. 바깥의 div에 할당된 onclick 핸들러가 동작한다.
+      3. form에 할당된 onclick 핸들러가 동작한다.
+      4. document 객체를 만날 때까지 각 요소에 할당된 onclick 핸들러가 동작한다.
+    -->
+    <!-- <hr /> -->
+    <!-- <form id="form">
+      FORM
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </form>
+    <button>클릭해주세요</button> -->
+  </body>
+</html>

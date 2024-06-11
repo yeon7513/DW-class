@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+body {
+  color: #333;
+}
+
+/* common */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* layout */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffd195, #ffb283);
+}
+
+.container {
+  padding: 30px 50px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.stars {
+  width: 100%;
+  font-size: 40px;
+  color: #ccc;
+}
+
+.active {
+  color: #ffb283;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script defer src="./js/5_selector.js"></script>
+  </head>
+  <body>
+    <div id="selector01">
+      <h2>
+        문단 안에 <a href="#">앵커</a>태그가 있다. <br />
+        두번째 <span><a href="#">앵커</a>는 자손이다.</span>
+      </h2>
+    </div>
+    <hr />
+    <div id="selector02">
+      <p>이 문단에는 <span>스팬</span>요소가 있다.</p>
+      <div>
+        이 div에도 <span>스팬</span>요소가 있다.
+        <p>div 내부 문단의 <span>스팬</span>요소이다.</p>
+        <div>
+          <p>
+            내부 div의 다시 문단 속 아주 <strong>깊은 곳에</strong>
+            <em>숨어있는</em> <span>스팬</span>요소도 있다.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="selector03">
+      <p>형제 선택자에 대하여</p>
+      <h3>꼬마버스 타요 가족을 소개합니다.</h3>
+      <p>타요</p>
+      <p>로기</p>
+      <div>라니</div>
+      <p>가니</p>
+    </div>
+    <hr />
+    <div id="selector04">
+      <p>일반 문단입니다.</p>
+      <p title="text1">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text2">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text1text2">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text1 text2">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text2 text1">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text1-text3">타이틀을 가지고 있는 문단입니다.</p>
+      <p title="text2 text3">타이틀을 가지고 있는 문단입니다.</p>
+    </div>
+  </body>
+</html>

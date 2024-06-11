@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* layout */
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(15px);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #4d4d54;
+}
+.progress {
+  width: 70%;
+  height: 100%;
+  background-color: #7000ff;
+  /* animation: play 60s linear infinite; */
+}
+
+.player-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: rgba(48, 48, 55, 0.7);
+}
+.player-main > div {
+  width: calc(100% / 3);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 24px;
+  color: #d9d9d9;
+}
+
+.artist {
+  font-size: 16px;
+  font-weight: 400;
+  color: #8c8993;
+}
+
+.controls {
+  text-align: center;
+}
+.controls button {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.controls button:hover {
+  opacity: 0.8;
+}
+
+.time {
+  text-align: right;
+  font-size: 14px;
+  color: #8c8993;
+}
+
+/* keyframe */
+/* @keyframes play {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+} */

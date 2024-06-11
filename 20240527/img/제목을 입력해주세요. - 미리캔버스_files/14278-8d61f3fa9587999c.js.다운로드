@@ -1,0 +1,301 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[14278,38035],{69006:function(e,t,o){o.d(t,{E:function(){return ElevatedButton}});var n=o(85893);let getDefaultElevatedButtonProps=e=>({...e,color:e.color??"neutral",size:e.size??"2XS",shape:e.shape??"square",shadow:e.shadow??"always"});var r=o(88095),i=o(54692);let ElevatedButton=e=>{let t=(0,r.Fg)(),o=getDefaultElevatedButtonProps(e);return(0,n.jsx)(l,{onClick:e.onClick,figmaProps:o,children:(0,n.jsx)(i.J,{iconName:e.iconName,width:t.token[`c_elevatedIconButton_size_icon_${o.size}`],height:t.token[`c_elevatedIconButton_size_icon_${o.size}`],color:e.iconColor?e.iconColor:t.token[`c_elevatedIconButton_color_contents_icon_${o.color}_default`]})})},l=r.ZP.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: ${({theme:e,figmaProps:t})=>e.token[`c_elevatedIconButton_size_container_${t.size}`]};
+  height: ${({theme:e,figmaProps:t})=>e.token[`c_elevatedIconButton_size_container_${t.size}`]};
+
+  border-radius: ${({theme:e,figmaProps:t})=>"round"===t.shape?e.token.c_elevatedIconButton_radius_round_default:e.token[`c_elevatedIconButton_radius_square_${t.size}`]};
+
+  background-color: ${({theme:e,figmaProps:t})=>e.token[`c_elevatedIconButton_color_background_${t.color}_default`]};
+
+  border-color: ${({theme:e,figmaProps:t})=>e.token[`c_elevatedIconButton_color_border_${t.color}_${t.shadow}_default`]};
+  border-width: ${({theme:e})=>e.token.c_elevatedIconButton_borderWidth};
+  border-style: solid;
+
+  ${({figmaProps:e,theme:t})=>"always"===e.shadow&&r.iv`
+      box-shadow: ${t.token[`c_elevatedIconButton_shadow_${e.size}`]};
+    `};
+
+  &:hover {
+    ${({figmaProps:e,theme:t})=>"onlyHover"===e.shadow&&r.iv`
+        box-shadow: ${t.token[`c_elevatedIconButton_shadow_${e.size}`]};
+      `};
+  }
+`},63967:function(e,t,o){o.d(t,{h:function(){return ButtonGroup}});var n=o(85893),r=o(67294),i=o(88095),l=o(47834);let getDefaultButtonGroupProps=e=>({direction:e.direction??"horizontal",widthType:e.widthType??"fill",aligment:e.aligment??"center",justify:e.justify??"center",gap:e.gap??"M"}),ButtonGroup=e=>{let t=getDefaultButtonGroupProps(e),o=(0,r.useMemo)(()=>({widthType:getButtonGroupWidthType(e.widthType),styledProps:"fill"===e.widthType&&{flexGrow:1,flexBasis:0}||void 0}),[e]);return(0,n.jsx)(l.Z.Provider,{value:o,children:(0,n.jsx)(c,{figmaProps:t,children:e.children})})};ButtonGroup.displayName="ButtonGroup";let getButtonGroupDirection=e=>"horizontal"===e?"row":(e="vertical","column"),getButtonGroupWidthType=e=>"hug"===e?"auto":"fill",getButtonGroupAlignment=e=>"start"===e?"flex-start":"end"===e?"flex-end":"center",getButtonGroupJustify=e=>"start"===e?"flex-start":"end"===e?"flex-end":"center",getButtonGroupGap=e=>"none"===e?"0px":"L"===e?"16px":"8px",c=i.ZP.div`
+  //
+  display: inline-flex;
+  flex-direction: ${({figmaProps:e})=>getButtonGroupDirection(e.direction)};
+  align-items: ${({figmaProps:e})=>getButtonGroupAlignment(e.aligment)};
+  justify-content: ${({figmaProps:e})=>getButtonGroupJustify(e.justify)};
+
+  ${({figmaProps:e,theme:t})=>{let o=getButtonGroupGap(e.gap);return"horizontal"===e.direction?t.mixin.flexColGap(o):t.mixin.flexRowGap(o)}};
+
+  width: 100%;
+`},35822:function(e,t,o){o.d(t,{l:function(){return Carousel}});var n=o(85893);let getPrimitivePropsOnly=e=>{let{height:t,children:o,buttonPositionValue:n,showSlideButton:r,contentsPaddingStart:i,endDiff:l,gap:c,scrollPercentage:a,onClickFinalIndicatorButton:s,onClickIndicatorButton:d,onClickMore:u,scrollRef:p,showScrollbar:_,...h}=e;return h},getDefaultCarouselProps=e=>({...e,gap:e.gap??8,contentsPaddingStart:e.contentsPaddingStart??0});var r=o(88095),i=o(14753),l=o(67294),c=o(69006);let Carousel=e=>{let t=(0,l.useRef)(null),o=getDefaultCarouselProps(e),r=getPrimitivePropsOnly(e),p=e.scrollRef??t,_=(0,l.useRef)(null),[h,g]=(0,l.useState)(!1),[f,m]=(0,l.useState)(!1),[x,v]=(0,l.useState)(!1),b=!!e.showSlideButton,scrollTo=t=>{_.current?.scrollTo({direction:t,percent:e.scrollPercentage??90,behavior:"smooth"})},onClickIndicatorButton=t=>{e.onClickIndicatorButton?.(t),scrollTo(t)},updateSlideButtonsVisibility=t=>{let{scrollLeft:o,scrollWidth:n,offsetWidth:r}=t;g(o>0),m(o+r<n-(e.endDiff||10)),v(n>r)};return(0,l.useEffect)(()=>{if(!p.current)return;let e=new ResizeObserver(()=>{p.current&&updateSlideButtonsVisibility(p.current)});return e.observe(p.current),()=>e.disconnect()},[]),(0,n.jsxs)(a,{...r,children:[(0,n.jsx)(i.p,{ref:_,scrollRef:p,endDiff:e.endDiff,scrollDirection:"horizontal",showScrollbar:e.showScrollbar,onScroll:e=>{updateSlideButtonsVisibility(e.currentTarget)},onMount:({hasScroll:e})=>m(e),overscrollBehavior:"auto",children:(0,n.jsxs)(s,{figmaProps:o,children:[e.children,x&&e.onClickMore&&(0,n.jsx)(u,{children:(0,n.jsx)(c.E,{iconName:"arrow_right",color:"neutral",size:"M",shadow:"none",shape:"round",onClick:()=>{e.onClickFinalIndicatorButton?.(),e.onClickMore?.()}})})]})}),b&&h&&(0,n.jsx)(d,{figmaProps:o,direction:"left",buttonPositionValue:e.buttonPositionValue,onClick:()=>onClickIndicatorButton("left"),children:(0,n.jsx)(c.E,{iconName:"chevron_left",size:"2XS",shape:"round",shadow:"always"})}),b&&f&&(0,n.jsx)(d,{figmaProps:o,direction:"right",buttonPositionValue:e.buttonPositionValue,onClick:()=>onClickIndicatorButton("right"),children:(0,n.jsx)(c.E,{iconName:"chevron_right",size:"2XS",shape:"round",shadow:"always"})})]})},a=r.ZP.div`
+  position: relative;
+`,s=r.ZP.div`
+  height: ${({figmaProps:e})=>e.height};
+  display: flex;
+  padding-left: ${({figmaProps:e})=>e.contentsPaddingStart}px;
+  ${({figmaProps:e,theme:t})=>t.mixin.flexColGap(`${e.gap}px`)}
+`,d=r.ZP.div`
+  position: absolute;
+  padding: 8px;
+
+  ${({direction:e})=>`padding-${e}: 0px`};
+  ${({direction:e,buttonPositionValue:t})=>`${e}: ${t??-6}px`};
+
+  cursor: pointer;
+
+  display: flex;
+  top: calc(50% - 20px);
+  justify-content: center;
+  align-items: center;
+`,u=r.ZP.div`
+  height: 100%;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+`},69121:function(e,t,o){o.d(t,{x:function(){return DividerVertical}});var n=o(85893),r=o(88095);let getDeafultPropsDividerVertical=e=>({paddingSize:e.paddingSize??"M",paddingPosition:e.paddingPosition??"all",transparent:e.transparent??!1,color:e.color??"default",borderWidth:e.borderWidth??"thinest"}),DividerVertical=e=>{let t=getDeafultPropsDividerVertical(e);return(0,n.jsx)(i,{figmaProps:t,children:(0,n.jsx)(l,{figmaProps:t})})},i=r.ZP.div`
+  width: 0px;
+  height: 100%;
+  padding: ${({figmaProps:e,theme:t})=>t.token[`c_dividerVertical_spacing_padding_${e.paddingPosition}_${e.paddingSize}`]};
+`,l=r.ZP.div`
+  width: 0px;
+  height: 100%;
+
+  border-right-style: solid;
+  border-right-width: ${({figmaProps:e,theme:t})=>t.token[`c_divider_borderWidth_${e.borderWidth}`]};
+  border-right-color: ${({figmaProps:e,theme:t})=>t.token[`c_divider_color_border_${e.transparent?"transparent":e.color}`]};
+`},82274:function(e,t,o){o.d(t,{c:function(){return u}});var n=o(85893),r=o(67294),i=o(88095),l=o(40894),c=o(54051),a=o(3422),s=o(3101),d=o(90121);let getDefaultInputUnitProps=e=>({...(0,d.h)(e),unit:e.unit??"percent",size:e.size??"M"}),u=(0,l.G)("InputFieldUnit",(e,t)=>{let o=(0,r.useRef)(null);(0,c.u)(t,{focus:e=>{o.current?.focus(e)},blur:()=>{o.current?.blur()}});let i=getDefaultInputUnitProps(e),{inputMode:l="decimal",size:a,onChangeValue:d,callbackProps:u,...g}=e,[f,m]=(0,r.useState)(e.value===u?.specialNumber?u?.specialValue:e.value.toString());(0,r.useEffect)(()=>{let t=e.value===u?.specialNumber?u?.specialValue:e.value.toString();f!==t&&m(t)},[e.value,u]);let x=(0,r.useCallback)(t=>{if(t===u?.specialValue&&void 0!==u?.specialNumber)return;if(isNaN(Number(t))){m(e.value);return}let o=getValidNumber(Number(t),e.min,e.max);e.onBlurValue?.(o),d?.(o),m(o.toString())},[e.value,u,d,e.min,e.max]);return(0,r.useEffect)(()=>{let onFocusOut=e=>{let t=e.target.value;x(t)},e=o.current;return e&&e.addEventListener("blur",onFocusOut),()=>{e&&e.removeEventListener("blur",onFocusOut)}},[x]),(0,n.jsxs)(p,{figmaProps:i,borderPositionsToReset:e.borderPositionsToReset??[],children:[(0,n.jsx)(s.I,{...g,ref:o,figmaProps:i,value:f,placeholder:e.placeholder,type:e.type??"text",inputMode:l,onChange:t=>{e.onChange?.(t);let o=t.target.value;if(m(o),"number"===e.type){let e=Number(o.replace(/^0+(?!\.|$)/,""));d?.(e)}},onKeyDown:t=>{if(e.onKeyDown?.(t),"Enter"===t.key){if(f===u?.specialValue&&void 0!==u?.specialNumber)return;if(isNaN(Number(f))){m(e.value);return}let t=getValidNumber(Number(f),e.min,e.max);d?.(t),e.onEnterValue?.(t),m(t.toString())}},onBlur:t=>{x(f),e.onBlur?.(t)},disabled:"disabled"===i.state,readOnly:"readOnly"===i.state,enterKeyHint:e.enterKeyHint}),"none"!==i.unit&&(0,n.jsx)(h,{figmaProps:i,children:_[i.unit]})]})}),getValidNumber=(e,t,o)=>void 0!==t&&e<t?t:void 0!==o&&e>o?o:e,p=i.ZP.div`
+  ${s.k};
+  padding: ${({theme:e,figmaProps:t})=>e.token[`c_inputFieldUnit_spacing_padding_unit${"none"===t.unit?"False":"True"}_${t.size}`]};
+  ${a.i};
+`,_={percent:"%",angle:"\xb0",px:"px",second:"s",inch:"in",cm:"cm",mm:"mm",none:"",speed:"x"},h=i.ZP.div`
+  min-width: 16px;
+  margin-left: ${({theme:e,figmaProps:t})=>e.token[`c_inputFieldUnit_spacing_itemGap_${t.size}`]};
+  text-align: center;
+  font: ${({theme:e,figmaProps:t})=>e.token[`c_inputFieldUnit_typography_unit_${t.size}`]};
+  font-size: 14px;
+  color: ${({theme:e,figmaProps:t})=>e.token[`c_inputFieldUnit_color_contents_unit_${"enabled"===t.state?"enabled":"disabled"}`]};
+  user-select: none;
+`},21713:function(e,t,o){o.d(t,{v:function(){return Menu}});var n=o(85893),r=o(88095),i=o(54692);let getPrimitivePropsOnly=e=>{let{type:t,menuName:o,iconName:n,iconColor:r,depthArrow:i,shortcutText:l,supportText:c,selected:a,disabled:s,textOverflow:d,...u}=e;return u},getDefaultPropsMenu=e=>({type:e.type??"menu",menuName:e.menuName,iconName:e.iconName,iconColor:e.iconColor,supportText:e.supportText??"",shortcutText:e.shortcutText??"",disabled:e.disabled??!1,selected:e.selected,depthArrow:e.depthArrow??!1,textOverflow:e.textOverflow??"ellipsis"});var l=o(39865),c=o(25265);let Menu=e=>{let t=getDefaultPropsMenu(e),o=(0,r.Fg)(),{type:a,menuName:x,iconName:v,iconColor:b,depthArrow:k,shortcutText:$,supportText:y,selected:w,disabled:S}=t,P=getPrimitivePropsOnly(e);return(0,n.jsxs)(s,{onClick:S?void 0:e.onClick,onMouseEnter:k&&!S?e.onMouseEnter:void 0,disabled:S,selected:k&&e.selected,...P,children:[(0,n.jsxs)(d,{children:[(0,n.jsxs)(u,{figmaProps:t,children:[v&&(0,n.jsx)(p,{width:o.token.c_menu_size_icon_leading,height:o.token.c_menu_size_icon_leading,color:b||o.token.c_menu_color_contents_icon_leading,iconName:v}),(0,n.jsx)(m,{figmaProps:t,disabled:S,children:x})]}),(0,n.jsxs)(_,{children:[$&&(0,n.jsx)(g,{figmaProps:t,children:$}),"menu"===a&&(0,n.jsxs)(n.Fragment,{children:[e.proIconComponent,k&&(0,n.jsx)(f,{children:(0,n.jsx)(c.h,{size:"XXS",type:"ghost",color:"neutralLight",iconName:"chevron_right",onClick:e.onClickIcon??e.onClick})},"depthArrow"),!k&&w&&(0,n.jsx)(f,{children:(0,n.jsx)(i.J,{width:o.token.c_menu_size_icon_check,height:o.token.c_menu_size_icon_check,color:o.token.c_menu_color_contents_icon_check,iconName:"check"})},"selectedIconWrapper")]}),"setting"===a&&(0,n.jsx)(l.r,{onClick:e.onClick,size:"M",selected:w,disabled:S})]})]}),y&&(0,n.jsx)(h,{iconName:v,children:y})]})},a=r.iv`
+  opacity: ${({theme:e})=>e.token.c_menu_opacity_disabled};
+  &.svg {
+    opacity: ${({theme:e})=>e.token.c_menu_opacity_disabled};
+  }
+`,s=r.ZP.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: ${({theme:e})=>e.token.c_menu_spacing_padding};
+  font: ${({theme:e})=>e.token.c_menu_typography_menu};
+  cursor: ${({disabled:e})=>e?"default":"pointer"};
+  ${({disabled:e})=>e&&a}
+  border-radius: ${({theme:e})=>e.token.c_menu_radius};
+  background-color: ${({theme:e,selected:t})=>t&&e.token.c_menu_color_background_hover};
+  ${({theme:e,disabled:t})=>e.mixin.hoverDesktopOnly(r.iv`
+      &:hover {
+        background-color: ${!t&&e.token.c_menu_color_background_hover};
+      }
+    `)}
+  &:active {
+    background-color: ${({theme:e,disabled:t})=>!t&&e.token.c_menu_color_background_pressed};
+  }
+`,d=r.ZP.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`,u=r.ZP.div`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  ${({figmaProps:{textOverflow:e},theme:t})=>"ellipsis"===e&&t.mixin.textOverflow()};
+`,p=(0,r.ZP)(i.J)`
+  flex-shrink: 0;
+`,_=r.ZP.div`
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: end;
+  gap: ${({theme:e})=>e.token.c_menu_spacing_itemGap_menu};
+`,h=r.ZP.div`
+  color: ${({theme:e})=>e.token.c_menu_color_contents_text_support};
+  padding-top: ${({theme:e})=>e.token.c_menu_spacing_itemGap_menuAndSub};
+  margin-left: ${({iconName:e})=>e?"29px":"0"};
+  white-space: pre-wrap;
+  font: ${({theme:e})=>e.token.c_menu_typography_support};
+`,g=r.ZP.div`
+  color: ${({theme:e})=>e.token.c_menu_color_contents_text_shortcut};
+  font: ${({theme:e})=>e.token.c_menu_typography_shortcut};
+  font-family: 'Pretendard';
+`,f=r.ZP.span`
+  display: flex;
+`,m=r.ZP.div`
+  line-height: 142%;
+  margin-left: ${({figmaProps:{iconName:e},theme:t})=>e&&t.token.c_menu_spacing_itemGap_iconAndContents};
+  color: ${({theme:e})=>e.token.c_menu_color_contents_text_menu};
+  opacity: ${({theme:e,disabled:t})=>t&&e.token.c_menu_opacity_disabled};
+
+  ${({figmaProps:{textOverflow:e},theme:t})=>"ellipsis"===e&&t.mixin.textOverflow()};
+`},14753:function(e,t,o){o.d(t,{p:function(){return s}});var n=o(85893),r=o(88095);let isScrollPositionAtBottom=({e,diff:t})=>{let{scrollHeight:o,clientHeight:n,scrollTop:r}=e.currentTarget;return o-n-r<=(t??0)},isScrollPositionAtRight=({e,diff:t})=>{let{scrollWidth:o,clientWidth:n,scrollLeft:r}=e.currentTarget;return o-n-r<=(t??0)},isScrollPositionAtTop=({e,diff:t})=>e.currentTarget.scrollTop<=(t??0),isScrollPositionAtLeft=({e,diff:t})=>e.currentTarget.scrollLeft<=(t??0),getDefaultPropsScrollView=e=>({barSize:e.barSize||"medium",paddingSize:e.paddingSize||"M"});var i=o(67294),l=o(95257),c=o(54051),a=o(40894);let s=(0,a.G)("ScrollView",(e,t)=>{let o=(0,i.useRef)(null),r=e.scrollRef??o,a=getDefaultPropsScrollView(e),s=e.scrollDirection??"vertical",u=e.showScrollbar??!0,p=e.scrollThrottleTime??0,_=e.endDiff??1,h=e.overscrollBehavior??"none";(0,c.u)(t,{scrollTo:({direction:e,percent:t=100,behavior:o="auto"})=>{"vertical"===s?r.current?.scrollTo({top:r.current?.scrollTop+r.current?.offsetHeight*(t/100)*("top"===e?-1:1),behavior:o}):r.current?.scrollTo({left:r.current?.scrollLeft+r.current?.offsetWidth*(t/100)*("left"===e?-1:1),behavior:o})},scrollToEnd:(e="auto")=>{"vertical"===s?r.current?.scrollTo({top:99999,behavior:e}):r.current?.scrollTo({left:99999,behavior:e})},scrollToStart:(e="auto")=>{"vertical"===s?r.current?.scrollTo({top:0,behavior:e}):r.current?.scrollTo({left:0,behavior:e})}});let g=(0,l.P)(t=>{e.onScroll?.(t),"vertical"===s?(isScrollPositionAtTop({e:t,diff:_})&&e.onStartReached?.(t),isScrollPositionAtBottom({e:t,diff:_})&&e.onEndReached?.(t)):(isScrollPositionAtLeft({e:t,diff:_})&&e.onStartReached?.(t),isScrollPositionAtRight({e:t,diff:_})&&e.onEndReached?.(t))},p);return(0,i.useEffect)(()=>{r.current&&e.onMount?.({hasScroll:r.current.clientWidth<r.current.scrollWidth})},[r.current?.scrollWidth]),(0,i.useEffect)(()=>{let t=new ResizeObserver(()=>{r.current&&("vertical"===s?r.current.clientHeight<r.current.scrollHeight?e.isScrollBarShown?.(!0):r.current.clientHeight>=r.current.scrollHeight&&e.isScrollBarShown?.(!1):r.current.clientWidth<r.current.scrollWidth?e.isScrollBarShown?.(!0):r.current.clientWidth>=r.current.scrollWidth&&e.isScrollBarShown?.(!1))});return r.current&&t.observe(r.current),()=>{t.disconnect()}},[r.current]),(0,n.jsx)(d,{overflowX:"horizontal"===s&&"auto"||void 0,overFlowY:"vertical"===s&&"auto"||void 0,onScroll:g,scrollDirection:s,showScrollbar:u,figmaProps:a,maxWidth:e.maxWidth,maxHeight:e.maxHeight,overscrollBehavior:h,ref:r,children:e.children})}),d=r.ZP.div`
+  box-sizing: border-box;
+  position: relative;
+  overscroll-behavior: ${({overscrollBehavior:e="none"})=>e};
+  overflow-y: ${({overFlowY:e})=>e};
+  overflow-x: ${({overflowX:e})=>e};
+
+  &::-webkit-scrollbar {
+    ${({showScrollbar:e})=>!e&&r.iv`
+        display: none;
+      `};
+    // width 계산로직: size + paddingSize * 2
+    width: ${({showScrollbar:e,scrollDirection:t,figmaProps:o,theme:n})=>e&&"vertical"===t?`calc(${"medium"===o.barSize?n.token.c_scrollView_size_thumb_medium:n.token.c_scrollView_size_thumb_thin} + ${2*getPaddingSize(o.paddingSize)}px)`:"0"};
+    height: ${({showScrollbar:e,scrollDirection:t,figmaProps:o,theme:n})=>e&&"horizontal"===t?`calc(${"medium"===o.barSize?n.token.c_scrollView_size_thumb_medium:n.token.c_scrollView_size_thumb_thin} + ${2*getPaddingSize(o.paddingSize)}px)`:"0"};
+  }
+
+  &::-webkit-scrollbar-track {
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // borderWidth = paddingSize
+    border: ${({figmaProps:e})=>`${getPaddingSize(e.paddingSize)}px solid transparent`};
+    border-radius: 999px;
+    background: ${({theme:e})=>e.token.c_scrollView_color_background_thumb};
+    background-clip: content-box;
+  }
+
+  max-width: ${({maxWidth:e})=>e??"none"};
+  max-height: ${({maxHeight:e})=>e??"none"};
+`,getPaddingSize=e=>"M"===e?4:"L"===e?8:0},40852:function(e,t,o){o.d(t,{i:function(){return Slider}});var n=o(85893),r=o(88095);let getDefaultPropsSlider=e=>({type:e.type??"basic",value:e.value??e.min??0,min:e.min??0,max:e.max??100,disabled:e.disabled??!1,decimal:e.decimal??!1,startColor:e.startColor??"#0399FB",endColor:e.endColor??"#FAA904"});var i=o(67294);let valueToPercent=(e=0,t=100,o=0)=>{let n=(o-e)/(t-e)*100;return isNaN(n)?0:n},Slider=e=>{let t=getDefaultPropsSlider(e),o=(0,i.useRef)(null);return(0,i.useEffect)(()=>{if(!o.current)return;let t=valueToPercent(e.min,e.max,e.value);o.current.style.setProperty("--background-track-value",`${t}%`)},[e.value,e.min,e.max]),(0,n.jsx)(l,{children:(0,n.jsx)(c,{ref:o,type:"range",min:e.min,max:e.max,step:t.decimal?e.step??.1:1,value:e.value,disabled:e.disabled,onChange:t=>{e.onChange(Number(t.target.value))},onMouseUp:e.onMouseUp,figmaProps:t})})},l=r.ZP.div`
+  width: 100%;
+  height: ${({theme:e})=>e.token.c_slider_size_handle};
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+`,c=r.ZP.input`
+  -webkit-appearance: none;
+  width: 100%;
+  height: ${({theme:e})=>e.token.c_slider_size_height_track};
+
+  ${({figmaProps:e,theme:t})=>"colorTwoTone"===e.type?r.iv`
+        background: linear-gradient(
+          90deg,
+          ${e.startColor} 0%,
+          ${e.endColor} 100%
+        );
+      `:"colorTone"===e.type?r.iv`
+        background: ${t.token.c_slider_color_background_track_colorTone};
+      `:"basic"===e.type?r.iv`
+        background: linear-gradient(
+          to right,
+          ${t.token.c_slider_color_background_activeTrack_basic} 0%,
+          ${t.token.c_slider_color_background_activeTrack_basic}
+            var(--background-track-value),
+          ${t.token.c_slider_color_background_track_basic} var(--background-track-value),
+          ${t.token.c_slider_color_background_track_basic} 100%
+        );
+      `:void 0}
+  ${({theme:e})=>r.iv`
+      height: ${e.token.c_slider_size_height_track};
+      border-radius: ${e.token.c_slider_radius_track};
+      outline: none;
+    `}
+
+  &:disabled {
+    pointer-events: none;
+    opacity: ${({theme:e})=>e.token.c_slider_opacity_disabled};
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: ${({theme:e})=>e.token.c_slider_size_handle};
+    height: ${({theme:e})=>e.token.c_slider_size_handle};
+    border-radius: ${({theme:e})=>e.token.c_slider_radius_handle};
+    background-color: ${({theme:e})=>e.token.c_slider_color_background_handle};
+    border-width: ${({theme:e})=>e.token.c_slider_borderWidth_handle};
+    border-style: solid;
+    border-color: ${({theme:e})=>e.token.c_slider_color_border_handle_enabled};
+    cursor: pointer;
+    ${({theme:e})=>e.mixin.hoverDesktopOnly(r.iv`
+        &:hover {
+          cursor: grab;
+          background-color: ${e.token.c_slider_color_background_handle};
+          border-color: ${e.token.c_slider_color_border_handle_interaction};
+        }
+      `)}
+  }
+
+  &:active {
+    background-color: ${({theme:e})=>e.token.c_slider_color_background_handleStateLayer};
+  }
+`},79509:function(e,t,o){o.d(t,{G:function(){return SliderWithInput}});var n=o(85893),r=o(88095),i=o(82274),l=o(65333),c=o(40852);let getDefaultPropsSliderWithInput=e=>({type:e.type??"basic",disabled:e.disabled??!1,value:e.value??e.min??0,min:e.min??0,max:e.max??100,decimal:e.decimal??!1,startColor:e.startColor??"#00ffff",endColor:e.endColor??"#a6a529",unit:e.unit??"none",label:e.label??"레이블",labelHierarchy:e.labelHierarchy??"deepThick",showInfoIcon:e.showInfoIcon??!1,tooltipText:e.tooltipText??"",tooltipPosition:e.tooltipPosition??"top"});var a=o(67294);let SliderWithInput=e=>{let t=getDefaultPropsSliderWithInput(e),[o,r]=(0,a.useState)(t.value);return(0,a.useEffect)(()=>{r(t.value)},[t.value]),(0,n.jsxs)(s,{children:[(0,n.jsxs)(d,{children:[(0,n.jsx)(l._,{hierarchy:t.labelHierarchy,text:t.label,showInfoIcon:t.showInfoIcon,tooltipText:t.tooltipText,tooltipPosition:t.tooltipPosition}),(0,n.jsx)(u,{children:(0,n.jsx)(i.c,{state:e.disabled?"disabled":"enabled",value:o,min:t.min,max:t.max,unit:t.unit,inputMode:"decimal",onChangeValue:t=>{e.onChangeInput?.(t),r(t)},onEnterValue:e.onEnterInput,onBlurValue:e.onBlurInput,size:"S",callbackProps:e.callbackProps})})]}),(0,n.jsx)(c.i,{type:t.type,min:t.min,max:t.max,value:t.value,disabled:t.disabled,decimal:t.decimal,onChange:t=>e.onChangeSlider(t,!0),onMouseUp:()=>e.onChangeSlider(t.value),step:e.step})]})},s=r.ZP.div``,d=r.ZP.div`
+  width: 100%;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+`,u=r.ZP.div`
+  vertical-align: center;
+  width: 68px;
+`},58606:function(e,t,o){o.d(t,{l:function(){return TooltipShortcut}});var n=o(85893);let getDefaultPropsShortCutTooltip=e=>({position:e.position??"top",arrow:e.arrow??!0,children:e.children??"",actionText:e.actionText,shortcutText:e.shortcutText,actionText02:e.actionText02??"",shortcutText02:e.shortcutText02??"",type:e.type??"multiple",label:e.label??"",show:e.show??!0});var r=o(88095),i=o(97952),l=o(59512),c=o(67294),a=o(43101),s=o(77055);let TooltipShortcut=e=>{let t=getDefaultPropsShortCutTooltip(e),o=(0,c.useRef)(null),{mouseOver:r,showTooltip:f,removeTooltip:m,pos:x,translateX:v,translateY:b}=(0,s.l)(t.arrow,t.position,o),k=!l.z&&t.show&&r;return(0,c.useEffect)(()=>{let onScroll=()=>{m()};if(k){if(null===o.current)return;let e=(e=>{for(;e&&e.parentNode;)if((e=e.parentNode)instanceof HTMLElement&&e.scrollHeight>e.clientHeight)return e;return null})(o.current);return e&&e.addEventListener("scroll",onScroll),window.addEventListener("scroll",onScroll),window.addEventListener("resize",onScroll),()=>{e&&e.removeEventListener("scroll",onScroll),window.removeEventListener("scroll",onScroll),window.removeEventListener("resize",onScroll)}}},[m,r]),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(d,{onMouseEnter:f,onMouseLeave:m,ref:o,children:e.children}),k&&(0,n.jsx)(a.h,{containerId:i.j,children:(0,n.jsxs)(u,{figmaProps:t,pos:x,transX:v,transY:b,onMouseEnter:m,children:[e.label&&(0,n.jsx)(p,{children:e.label}),(0,n.jsxs)(_,{figmaProps:t,children:[(0,n.jsx)(h,{figmaProps:t,children:e.actionText}),(0,n.jsx)(g,{children:e.shortcutText})]}),"multiple"===e.type&&(0,n.jsxs)(_,{figmaProps:t,children:[(0,n.jsx)(h,{figmaProps:t,children:e.actionText02}),(0,n.jsx)(g,{children:e.shortcutText02})]})]})})]})},d=r.ZP.div``,u=r.ZP.span`
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  white-space: nowrap;
+
+  position: relative;
+  pointer-events: none;
+
+  text-align: center;
+
+  background-color: ${({theme:e})=>e.token.c_tooltipShortcut_color_background};
+  border-radius: ${({theme:e})=>e.token.c_tooltipShortcut_radius};
+  padding: ${({figmaProps:e,theme:t})=>"single"===e.type?t.token.c_tooltipShortcut_spacing_padding_single:t.token.c_tooltipShortcut_spacing_padding_multiple};
+  box-shadow: ${({theme:e})=>e.token.c_tooltipShortcut_shadow};
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+
+    ${({figmaProps:{position:e},theme:t})=>i.J[e](t.token.c_tooltipShortcut_color_background)}
+  }
+
+  ${({figmaProps:{arrow:e}})=>`
+        ${e?"":"&::after { display: none; }"}
+    `}
+
+  ${({pos:e,transY:t,transX:o})=>e&&`
+    position: fixed;
+    left: ${e.x}px;
+    top: ${e.y}px;
+    transform: translateY(${t}) translateX(${o});
+  `}
+`,p=r.ZP.strong`
+  text-align: left;
+  padding-bottom: ${({theme:e})=>e.token.c_tooltipShortcut_spacing_itemGap_contents};
+  color: ${({theme:e})=>e.token.c_tooltipShortcut_color_contents_labelText};
+  font: ${({theme:e})=>e.token.c_tooltipShortcut_typography_labelText};
+`,_=r.ZP.span`
+  display: flex;
+  text-align: left;
+  padding-bottom: ${({figmaProps:e,theme:t})=>"single"!==e.type&&t.token.c_tooltipShortcut_spacing_itemGap_shortcutList};
+`,h=r.ZP.span`
+  color: ${({theme:e})=>e.token.c_tooltipShortcut_color_contents_actionText};
+  font: ${({theme:e})=>e.token.c_tooltipShortcut_typography_actionText};
+  line-height: 1;
+  padding-right: ${({theme:e,figmaProps:t})=>(t.shortcutText||t.shortcutText02)&&(t.actionText||t.actionText02)?e.token.c_tooltipShortcut_spacing_itemGap_shortcutItem:"none"};
+`,g=r.ZP.span`
+  color: ${({theme:e})=>e.token.c_tooltipShortcut_color_contents_shortcutText};
+  font: ${({theme:e})=>e.token.c_tooltipShortcut_typography_shortcutText};
+  line-height: 1;
+  font-family: 'Pretendard';
+  display: inline-block;
+`}}]);

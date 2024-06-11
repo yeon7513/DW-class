@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+/* colors */
+:root {
+  --main-color: #;
+  --common-color: #;
+  --accent-color: #;
+  --hover-color: #;
+}
+
+/* common */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* layout */
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+.column div {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+.column div span {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  z-index: -1;
+  transform: translateX(-50%);
+  transition: .5s ease-in-out;
+}
+figure {
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 200px;
+  transition: 1s;
+}
+figure img {
+  transition: 1s;
+}
+figure:hover {
+  filter: brightness(50%);
+}
+figure:hover + span {
+  opacity: 1;
+  bottom: -15px;
+}
+
+/* zoom in effect */
+.zoom-in figure:hover img {
+  transform: scale(1.5);
+}
+
+/* zoom out effect */
+.zoom-out figure:hover img {
+  transform: scale(0.8);
+}
+
+/* slide effect */
+.slide figure img {
+  width: 400px;
+}
+.slide figure:hover img {
+  transform: translateX(-50px);
+}
+
+/* blur effect */
+.blur figure:hover img {
+  filter: blur(5px);
+}
+
+
+/* flash effect */
+.flash figure:hover {
+  filter: none;
+}
+.flash figure:hover img {
+  animation: flash 1.5s;
+}
+/* flash animation */
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* shine effect */
+.shine figure {
+  position: relative;
+}
+.shine figure:hover {
+  filter: none;
+}
+.shine figure::before {
+  content: "";
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 20%,
+    rgba(255,255,255,0.3) 20% 30%, 
+    transparent 30% 40%,
+    rgba(255,255,255,0.5) 40% 60%,
+    transparent 60%
+  );
+  transform: skewX(-25deg);
+  filter: blur(20px);
+}
+.shine figure:hover::before {
+  animation: shine 1.5s ease-in-out 2 alternate;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

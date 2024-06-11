@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+/* colors */
+:root {
+  --main-color: #F5DD61;
+  --common-color: #FAA300;
+  --accent-color: #F4538A;
+  --hover-color: #59D5E0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 20% 1fr 10%;
+  grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer'
+  ;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* grid-column 사용 */
+/* header {
+  grid-column: 1/3;
+  background-color: yellow;
+}
+aside {
+  grid-column: 1/2;
+  background-color: pink;
+}
+main {
+  grid-column: 2/3;
+  background-color: beige;
+}
+footer {
+  grid-column: 1/3;
+  background-color: burlywood;
+} */
+
+/* grid-area 사용 */
+header {
+  grid-area: header;
+  background-color: var(--accent-color);
+}
+aside {
+  grid-area: aside;
+  background-color: var(--common-color);
+}
+main {
+  grid-area: main;
+  background-color: var(--main-color);
+}
+footer {
+  grid-area: footer;
+  background-color: var(--accent-color);
+}
+
+
+/* my blog page */
+
+/* common */
+h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+aside, main {
+  padding: 20px;
+}
+
+
+/* layout */
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+
+/* aside - menu */
+aside {
+  display: flex;
+  flex-direction: column;
+}
+aside ul {
+  background-color: rgba(255,255,255,0.5);
+}
+aside ul li {
+  border-bottom: 1px dashed var(--common-color);
+}
+aside ul li a {
+  display: block;
+  padding: 15px 10px;
+  transition: 0.3s;
+}
+aside ul li a i {
+  margin-right: 5px;
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+aside ul li a:hover {
+  color: var(--hover-color);
+}
+aside ul li a:hover i {
+  color: var(--hover-color);
+}
+
+
+/* sponge bob */
+aside .spongebob {
+  margin-top: auto;
+}
+aside .spongebob img {
+  display: block;
+  width: 100%;
+}
+aside .spongebob span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* main - section */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+section {
+  flex-grow: 1;
+  padding: 20px;
+  border: 2px dotted var(--accent-color);
+  border-radius: 20px;
+  background-color: rgba(255,255,255, 0.5);
+}
+section h3 {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--accent-color);
+}
+
+
+/* footer */
+footer {
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}

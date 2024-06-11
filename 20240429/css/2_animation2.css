@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+/* common */
+html, body {
+  margin: 0 auto;
+  padding: 5px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+  animation-fill-mode : 애니메이션 미실행 시(대기 또는 종료) 요소의 스타일을 지정한다.
+*/
+
+div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px;
+  width: 150px;
+  height: 150px;
+  font-size: 1em;
+  color: #fff;
+  background-color: red;
+
+  /* animation: fillMode;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s; */
+
+  /* 
+    animation 축약
+    animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    - default
+    · name : none
+    · duration : 0
+    · timing-function : ease
+    · delay : 0
+    · iteration-count : 1
+    · direction : normal
+    · fill-mode : none
+    · play-state : pasued
+  */
+  animation: fillMode 2s linear 2s;
+}
+
+div:nth-of-type(1) {
+  animation-fill-mode: none;
+}
+div:nth-of-type(2) {
+  animation-fill-mode: forwards;
+}
+div:nth-of-type(3) {
+  animation-fill-mode: backwards;
+}
+div:nth-of-type(4) {
+  animation-fill-mode: both;
+}
+
+/* keyframe */
+@keyframes fillMode {
+  0% {
+    left: 0;
+    background-color: yellow;
+  }
+  100% {
+    left: 400px;
+    background-color: blue;
+  }
+}

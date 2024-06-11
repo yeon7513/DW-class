@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 연습</title>
+    <link rel="stylesheet" href="./css/3_conditionPractice.css" />
+    <script defer src="./js/3_conditionPractice.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>condition practice</h1>
+      <main>
+        <div class="calculator">
+          <h2>1. 숫자 2개와 연산자 1개를 입력 받아 연산자에 맞는 계산 결과를 출력하는 프로그램을 작성하시오.</h2>
+          <form class="cal-values">
+            <input type="text" class="first-number" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');" required />
+            <select required>
+              <option value="">연산자</option>
+              <option value="+">+ (덧셈)</option>
+              <option value="-">- (뺄셈)</option>
+              <option value="*">* (곱셈)</option>
+              <option value="/">/ (나눗셈)</option>
+              <option value="%">% (나머지)</option>
+            </select>
+            <input type="text" class="second-number" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');" required />
+            <button class="cal-btn btn">계산하기</button>
+          </form>
+          <p></p>
+        </div>
+        <div class="grades">
+          <h2>2. 점수를 입력받아 학점을 출력하시오.</h2>
+          <form class="grade-values">
+            <input type="text" class="score" maxlength="3" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');" />
+            <button class="grade-btn btn">학점 확인하기</button>
+          </form>
+          <div class="grade-result">
+            <span></span>
+            <p></p>
+          </div>
+        </div>
+        <div class="RPS-game">
+          <h2>3. 두 사람의 가위, 바위, 보를 입력 받아 승자를 출력하는 프로그램을 작성하시오.</h2>
+          <form class="RPS-user">
+            <div class="user first-user">
+              <h3>user #1</h3>
+              <input type="radio" name="user1" id="s1" value="1" />
+              <label for="s1">가위</label>
+              <input type="radio" name="user1" id="r1" value="2" />
+              <label for="r1">바위</label>
+              <input type="radio" name="user1" id="p1" value="3" />
+              <label for="p1">보</label>
+            </div>
+            <div class="vs">
+              <p>vs</p>
+            </div>
+            <div class="user second-user">
+              <h3>user #2</h3>
+              <input type="radio" name="user2" id="s2" value="1" />
+              <label for="s2">가위</label>
+              <input type="radio" name="user2" id="r2" value="2" />
+              <label for="r2">바위</label>
+              <input type="radio" name="user2" id="p2" value="3" />
+              <label for="p2">보</label>
+            </div>
+          </form>
+          <div class="RPS-btn-wrap">
+            <button class="RPS-btn btn">결과 확인하기</button>
+          </div>
+          <div class="RPS-result">
+            <p></p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

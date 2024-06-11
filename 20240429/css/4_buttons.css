@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TTHakgyoansimUndongjangL';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimUndongjangL.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+#wrapper {
+  padding: 1rem;
+}
+.content {
+  margin-bottom: 30px;
+}
+h2 {
+  margin-bottom: 10px;
+}
+a[class*="btn"] {
+  display: inline-block;
+  padding: 20px 60px;
+  font-size: 22px;
+  font-family: 'TTHakgyoansimUndongjangL', serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* 3d button */
+.btn-3d {
+  position: relative;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+.btn-3d.green {
+  background-color: #82c8a0;
+  box-shadow: 
+    0 0 0 1px #82c8a0 inset,
+    0 0 0 2px rgba(255,255,255,0.15) inset,
+    0 8px 0 0 rgba(126, 194, 155, 0.7),
+    0 8px 0 1px rgba(0, 0, 0, 0.4),
+    0 8px 8px 1px rgba(0, 0, 0, 0.5)
+  ;
+}
+.btn-3d:active {
+  top: 9px;
+}
+.btn-3d.green:active {
+  text-shadow: none;
+  box-shadow:
+    0 0 0 1px #82c8a0 inset,
+    0 0 0 2px rgba(255,255,255,0.15) inset,
+    0 0 0 1px rgba(0, 0, 0, 0.4)
+  ;
+}
+.btn-3d.green:hover {
+  background-color: #80c49d;
+}
+
+/* fade button */
+.btn-fade.orange {
+  background-color: #ffaa40;
+  transition: all .2s;
+}
+.btn-fade.orange:hover {
+  background-color: #ff8200;
+}
+
+/* border button */
+.btn-border.purple {
+  background-color: #a74982;
+  box-shadow: 0 0 0 0 #6d184d;
+  transition: all .2s;
+}
+.btn-border.purple:hover {
+  box-shadow: 0 0 0 5px #6d184d;
+}
+
+/* click me button */
+.btn-clickme.sky {
+  overflow: hidden;
+  background-color: #4ec0e9;
+  transition: all .2s;
+}
+.btn-clickme.sky span {
+  display: inline-block;
+  animation: clickme 3s ease-in-out infinite;
+  
+}
+
+/* click me scale & rotate animation */
+@keyframes clickme {
+  5%, 50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+
+/* gradient button */
+.btn-gradient.purple-blue {
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  box-shadow: 
+    2px 2px 2px 0px rgba(255,255,255,0.5) inset,
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1)
+  ;
+  transition: all .2s;
+}
+.btn-gradient.purple-blue::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  transition: all .2s;
+}
+.btn-gradient.purple-blue:hover::after {
+  transform: scale(2) rotate(180deg);
+} 
+
+/* open button */
+.btn-open.skyblue {
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #4dbde5;
+  color: #4dbde5;
+  background-color: transparent;
+  transition: all .2s;
+}
+.btn-open.skyblue::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  background-color: #4dbde5;
+  transition: all .2s;
+}
+
+.btn-open.skyblue:hover {
+  color: #fff;
+}
+.btn-open.skyblue:hover::before {
+  width: 100%;
+  height: 100%;
+}

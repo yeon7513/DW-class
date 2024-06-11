@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event</title>
+    <link rel="stylesheet" href="./css/1_event.css" />
+    <script defer src="./js/1_event.js"></script>
+  </head>
+  <body>
+    <p id="pTag">이벤트 리스너 테스트</p>
+    <form>
+      <input type="text" id="inputTag" class="formEl" />
+      <textarea id="textareaTag" rows="5" cols="25" class="formEl"></textarea>
+      <select class="changeTest">
+        <option>현대</option>
+        <option>기아</option>
+        <option>KG모빌리티</option>
+      </select>
+      <div>
+        <input type="radio" id="male" name="gender" class="changeTest" value="male" />
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" class="changeTest" value="female" />
+        <label for="female">여성</label>
+      </div>
+      <div>
+        <input type="checkbox" id="apple" class="changeTest" value="apple" />
+        <label for="apple">사과</label>
+        <input type="checkbox" id="banana" class="changeTest" value="banana" />
+        <label for="banana">바나나</label>
+        <input type="checkbox" id="grape" class="changeTest" value="grape" />
+        <label for="grape">포도</label>
+      </div>
+      <div>
+        <input type="reset" value="초기화" id="resetBtn" />
+        <input type="submit" value="제출" id="submitBtn" />
+      </div>
+    </form>
+  </body>
+</html>

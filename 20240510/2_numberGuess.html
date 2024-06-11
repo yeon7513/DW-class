@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 추측 게임</title>
+    <link rel="stylesheet" href="./css/2_numberGuess.css" />
+    <script defer src="./js/2_numberGuess.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Number Guess</h1>
+      <p>1부터 100 사이의 정수를 입력하세요.</p>
+      <div class="container">
+        <input id="number" type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');" />
+        <button class="btn" onclick="check()">숫자 추측</button>
+      </div>
+      <p id="message"></p>
+      <p class="entered-number"></p>
+    </div>
+  </body>
+</html>

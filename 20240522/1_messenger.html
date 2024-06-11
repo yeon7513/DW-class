@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DW Messenger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/1_messenger.css" />
+    <script defer src="./js/1_messenger.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <img class="background" src="./images/background.png" alt="" />
+      <div class="container">
+        <!-- header : 상대방 정보 표시 및 전화(음성, 영상) 통화 버튼 -->
+        <div class="header">
+          <button><i class="fa-solid fa-arrow-left"></i></button>
+          <div class="user">
+            <div class="face">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="name">
+              <p>썸남</p>
+              <span>1시간 전에 활동</span>
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button><i class="fa-solid fa-phone"></i></button>
+            <button><i class="fa-solid fa-video"></i></button>
+          </div>
+        </div>
+
+        <!-- 대화내용 표시부 -->
+        <div id="chat-box">
+          <div class="bubble friend-bubble">자니?</div>
+          <div class="bubble friend-bubble">자나보네...</div>
+          <div class="bubble friend-bubble">잘 자</div>
+        </div>
+
+        <!-- 대화 작성부 -->
+        <div class="footer">
+          <textarea rows="3" placeholder="메시지를 입력하세요."></textarea>
+          <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

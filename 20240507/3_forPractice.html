@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문 연습하기</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/3_forPractice.css" />
+    <script defer src="./js/3_forPractice.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="even-number">
+        <h3>Q. 1부터 20까지의 짝수만 출력하세요.</h3>
+        <p>(조건문 없이 반복문만 사용)</p>
+        <div class="numbers"></div>
+      </div>
+      <div class="star-wrap">
+        <div class="star-item">
+          <h3>별찍기 #1</h3>
+          <div class="star01"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #2</h3>
+          <div class="star02"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #3</h3>
+          <div class="star03"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #4</h3>
+          <div class="star04"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #5</h3>
+          <div class="star05"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #6</h3>
+          <div class="star06"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #7</h3>
+          <div class="star07"></div>
+        </div>
+        <div class="star-item">
+          <h3>별찍기 #8</h3>
+          <div class="star08"></div>
+        </div>
+      </div>
+      <div class="input-sum">
+        <h3>Q. 1부터 사용자가 입력한 숫자만큼의 합을 출력하세요.</h3>
+        <form>
+          <div class="input-group">
+            <input type="text" onKeyup="this.value=this.value.replace(/[^-0-9]/g,'');" required placeholder="enter a number!" value="" />
+            <button>계산하기</button>
+          </div>
+        </form>
+        <p></p>
+      </div>
+      <div class="multiplication-tables">
+        <h3>Q. 반복문으로 구구단 표를 만드세요.</h3>
+        <table></table>
+      </div>
+      <div class="multiplication-tables">
+        <h3>Q. 반복문으로 각각의 구구단 표를 만드세요.</h3>
+        <div class="table-items"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'TTHakgyoansimMulgyeolB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMulgyeolB.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #333;}
+
+/* colors */
+:root {
+  --main-color: #153448;
+  --accent-color: #DFD0B8;
+  --common-color: #3C5B6F;
+  --hover-color: #948979;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* layout */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+header {
+  padding: 10px 20px 10px 0;
+  width: 100%;
+  text-align: right;
+}
+header h1.logo {
+  font-family: 'TTHakgyoansimMulgyeolB', serif;
+  font-size: 48px;
+  color: var(--accent-color);
+}
+
+/* main */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* spot menu */
+.spot-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.spot-menu ul li {
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.spot-menu ul li:hover {
+  text-decoration: underline;
+  color: var(--hover-color);
+}
+.spot-menu ul li:first-child {
+  padding-right: 10px;
+}
+.spot-menu ul li:first-child:after {
+  content: "|";
+  opacity: 0.8;
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 100;
+  color: var(--accent-color);
+}
+
+/* content box */
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+#content .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  width: 300px;
+  background-color: var(--common-color);
+}
+/* content title */
+#content .box h3 {
+  margin-bottom: 30px;
+}
+
+/* form - input */
+form {
+  width: 100%;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group input {
+  padding: 8px 8px 8px 33px;
+  width: 100%;
+  background-color: var(--main-color);
+  border: 0;
+  outline: 0;
+  color: var(--accent-color);
+}
+.input-group input::placeholder {
+  padding-left: 5px;
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+.input-group input:focus {
+  background-color: rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+
+.input-group input:focus + label {
+  color: var(--hover-color);
+  transition: 0.5s;
+
+}
+
+.input-group input[type="password"]:last-child {
+  margin-bottom: 0;
+}
+
+/* input 자동완성 배경색상 없애기 */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+		-webkit-transition: background-color 9999s ease-out !important;
+    -webkit-text-fill-color: #DFD0B8 !important;
+}
+
+/* input icon */
+.input-group .email, .email + .password, .password + .pw-check {
+  position: relative;
+  margin-bottom: 5px;
+}
+.input-group .email label, .password label, .pw-check label {
+  position: absolute;
+  bottom: 50%;
+  left: 4%;
+  transform: translateY(50%);
+  color: var(--accent-color);
+}
+
+
+/* submit button */
+.submit-btn {
+  text-align: center;
+}
+.submit-btn input[type="submit"], input[type="reset"] {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--main-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.submit-btn input[type="submit"]:hover, input[type="reset"]:hover {
+  color: #fff;
+  background-color: var(--hover-color);
+  box-shadow: 0 2px 8px var(--main-color);
+}
+.sign-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* find pw */
+.login-box .find-pw {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
+}
+.login-box .find-pw a {
+  transition: 0.3s;
+}
+.login-box .find-pw a:hover {
+  text-decoration: underline;
+  color: var(--hover-color);
+}
+
+/* sign up margin */
+.sign-box h3 {
+  margin-bottom: 21px!important;
+}
+
+/* content box hide */
+.hide {
+  display: none!important;
+}

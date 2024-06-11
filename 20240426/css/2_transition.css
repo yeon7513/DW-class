@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* common font-family */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+/* common */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* layout */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+div > div {
+  /* 
+    transition 적용 가능한 css 프로퍼티 
+    width, font-size, background-color처럼 하나의 범주 안에서 크기나 색상의 값은 변화가 가능하지만, display 프로퍼티 등의 범주가 애매한 속성들은 적용될 수 없다.
+  */
+  width: 200px;
+  height: 100px;
+  background-color: crimson;
+  /* 
+    transition 축약
+    transition: property duration(필수) timing-function;
+    · property : 기본값 all
+    · duration : 기본값 0
+    · timing-function : 기본값 ease
+    · delay : 기본값 0 (단 축약형에는 안들어감. 따로 써줘야함.)
+
+    transition 다중 축약
+    -> ex) transition: width 0.3s, height 0.3s ease-in-out;
+    --> property를 여러 개 쓸거면 기본 축약은 지키되 ,로 구분함.
+  */
+  transition-property: width, height, background-color;
+  transition-duration: 2s, 2s, 2s;
+  /* 
+    transition-timing-function
+    · ease : 기본값. 느리게 시작하여 점점 빨라졌다가 느려지면서 종료.
+    · linear : 시작부터 종료까지 일정함.
+    · ease-in : 느리게 시작한 후 일정한 속도에 다다르면 그 상태로 종료. (처음에만 느려진다.)
+    · ease-out : 일정한 속도로 시작해서 점점 느려지면서 종료. (끝에 다다를 때 느려진다.)
+    · ease-in-out : ease와 비슷하게 느리게 시작하여 느려지면서 종료.
+  */
+  transition-timing-function: cubic-bezier();
+  /* transition-delay: 1s; */
+}
+div > div:hover {
+  width: 500px;
+  height: 300px;
+  background-color: royalblue;
+}

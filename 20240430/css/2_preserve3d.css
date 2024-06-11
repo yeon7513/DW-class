@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+/* colors */
+:root {
+  --main-color: #;
+  --common-color: #;
+  --accent-color: #;
+  --hover-color: #;
+}
+
+/* common */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* layout */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* 
+    perspective
+    - 보여지는 시야의 원근감 조절하기.
+    - 수치가 작을수록 점점 가까워진다.
+    - 큰 수치에는 리미트가 있다. (한 800px 정도?)
+    - 가까이(수치가 작으면) 있는 것은 크고, 멀리(수치가 크면) 있는 것은 작게 보인다!!
+  */
+  /* perspective: 150px; */
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-color: rgba(30,30,30,0.5);
+  /* transform: rotateY(90deg); */
+  /* 
+    transform-style
+    - 요소를 2d 또는 3d로 인식하게 하는 속성
+    · flat : 기본(2d)
+    · preserve-3d : 3d로 인식
+  */
+  transform-style: preserve-3d; /* 3D로 만들려면 꼭 써줘야한다!! */
+  transition: all 3s;
+}
+.card > div {
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  
+}
+.card .right {
+  background-color: orange;
+  transform: translateZ(150px);
+  /* transform origin 때문에 z축을 기준으로 빼줘야함. */
+}
+.card .left {
+  transform: translateX(-150px) rotateY(-90deg);
+  background-color: yellow;
+}
+.card:hover {
+  transform: rotateY(90deg);
+}

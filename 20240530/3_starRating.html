@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>star rating</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/3_starRating.css" />
+    <script defer src="./js/3_starRating.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <h1>how was your experience?</h1>
+        <div class="stars">
+          <i class="fa-solid fa-star star" onclick="{checkStars(0)}"></i>
+          <i class="fa-solid fa-star star" onclick="{checkStars(1)}"></i>
+          <i class="fa-solid fa-star star" onclick="{checkStars(2)}"></i>
+          <i class="fa-solid fa-star star" onclick="{checkStars(3)}"></i>
+          <i class="fa-solid fa-star star" onclick="{checkStars(4)}"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

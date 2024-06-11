@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/2_otp.css" />
+    <script defer src="./js/2_otp.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <header>
+          <i class="bx bxs-check-shield"></i>
+        </header>
+        <h4>Enter OTP Code</h4>
+        <form>
+          <div class="input-field">
+            <input type="number" id="a" />
+            <input type="number" id="b" disabled />
+            <input type="number" id="c" disabled />
+            <input type="number" id="d" disabled />
+          </div>
+          <button>Verify OTP</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+}
+
+fieldset:first-child {
+  margin-bottom: 10px;
+}
+
+/* required-info */
+.info-title {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+}
+input[type='password'] {
+  width: 250px;
+}
+
+/* extra-info */
+.add-info:not(:last-child) {
+  margin-bottom: 20px;
+}
+.add-info span {
+  display: block;
+}
+textarea {
+  resize: none;
+}
+.btn {
+  margin-top: 10px;
+}

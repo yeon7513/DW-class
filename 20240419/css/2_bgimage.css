@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+/* background image */
+html, body {
+  width: 100%;
+  height: 1000%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  /* background: url(../image/bg-img.jpg) no-repeat center/cover; */
+  background-image: url(../image/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 10% 40%;
+  background-attachment: fixed;
+  /* background: color(image 없으면 필수) | image(color 없으면 필수) | size | repeat | attachment */
+}
+
+/* layout */
+header {
+  padding: 20px 0;
+  text-align: center;
+  border: 1px dotted rosybrown;
+}
+main {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 900px;
+  box-sizing: border-box;
+}
+main p {
+  text-align: center;
+}

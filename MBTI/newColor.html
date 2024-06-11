@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD COLOR</title>
+    <link rel="stylesheet" href="./resources/css/style.css" />
+    <link rel="stylesheet" href="./resources/css/new.css" />
+    <script defer type="module" src="./resources/js/newColor.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <div class="header">
+          <h1 class="header-heading">새 컬러 등록하기</h1>
+          <a class="cancel" href="javascript:history.go(-1)">
+            <img class="cancel-icon" src="./resources/images/x.svg" alt="" />
+          </a>
+        </div>
+        <div class="section">
+          <h2 class="section-heading">MBTI</h2>
+          <div class="mbti-options"></div>
+        </div>
+        <div class="section">
+          <h2 class="section-heading">
+            컬러
+            <button class="btn random-btn">
+              <img
+                class="repeat-icon"
+                src="./resources/images/repeat.svg"
+                alt=""
+              />
+            </button>
+          </h2>
+          <div class="color-input-container">
+            <input class="color-input" type="text" value="#9441FF" />
+            <span
+              class="color-input-chip"
+              style="background-color: #9441ff"
+            ></span>
+          </div>
+        </div>
+        <button class="btn reg-btn">컬러 등록</button>
+      </div>
+    </div>
+  </body>
+</html>

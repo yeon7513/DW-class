@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>log-in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="./css/2_login.css" />
+    <script defer src="./js/2_login.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1 class="logo">
+          <a href="#">F.C</a>
+        </h1>
+      </header>
+      <main>
+        <div id="content">
+          <div class="spot-menu">
+            <ul>
+              <li id="goto-login">log in</li>
+              <li id="goto-signup">sign up</li>
+            </ul>
+          </div>
+          <div class="login-box box">
+            <h3>Log in</h3>
+            <form>
+              <div class="input-group">
+                <div class="email">
+                  <input type="text" id="email" placeholder="Your Email" />
+                  <label for="email">
+                    <i class="fa-solid fa-at"></i>
+                  </label>
+                </div>
+                <div class="password">
+                  <input type="password" id="pw" placeholder="Your Password" />
+                  <label for="pw">
+                    <i class="fa-solid fa-key"></i>
+                  </label>
+                </div>
+              </div>
+              <div class="submit-btn">
+                <input type="submit" value="SUBMIT" />
+              </div>
+              <div class="find-pw">
+                <a href="#">Forget your password?</a>
+              </div>
+            </form>
+          </div>
+          <div class="sign-box box hide">
+            <h3>Sign up</h3>
+            <form>
+              <div class="input-group">
+                <div class="email">
+                  <input type="text" id="s-email" placeholder="Your Email" />
+                  <label for="s-email">
+                    <i class="fa-solid fa-at"></i>
+                  </label>
+                </div>
+                <div class="password">
+                  <input type="password" id="s-pw" placeholder="Your Password" />
+                  <label for="s-pw">
+                    <i class="fa-solid fa-key"></i>
+                  </label>
+                </div>
+                <div class="pw-check">
+                  <input type="password" id="s-pw-ck" placeholder="Check Password" />
+                  <label for="s-pw-ck">
+                    <i class="fa-solid fa-check"></i>
+                  </label>
+                </div>
+              </div>
+              <div class="submit-btn sign-btn">
+                <input type="submit" value="SUBMIT" />
+                <input type="reset" value="RESET" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'SOYOMapleBoldTTF', sans-serif;}
+
+/* colors */
+:root {
+  --main-color: #F1F1F1;
+  --common-color: #EADBC8;
+  --accent-color: #B5C18E;
+  --hover-color: #C7B7A3;
+}
+
+/* common */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+
+/* layout */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#wrapper > div {
+  width: 300px;
+}
+
+/* header */
+header {
+  letter-spacing: 10px;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--accent-color);
+}
+
+/* todolist 추가 */
+.add-todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* input style */
+.add-todo #input {
+  flex-grow: 1;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid var(--common-color);
+  background-color: #fff;
+  color: var(--hover-color);
+  transition: 0.3s;
+
+}
+.add-todo #input:focus {
+  outline: 0;
+  border: 1px solid var(--hover-color);
+  background-color: rgba(255,255,255,0.5);
+}
+.add-todo #input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--hover-color);
+  transition: .3s;
+}
+.add-todo #input:focus::placeholder {
+  color: var(--common-color);
+}
+.add-todo button {
+  appearance: none;
+  padding: 11px 20px;
+  font-family: "Josefin Sans", sans-serif;
+  border: 1px solid var(--hover-color);
+  background-color: var(--hover-color);
+  color: var(--main-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.add-todo button:hover {
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+
+/* todolist items */
+.container {
+  overflow-y: scroll;
+  padding: 10px;
+  height: 500px;
+  border: 2px solid var(--common-color);
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+.container p {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.container p:last-child {
+  margin-bottom: 0;
+}
+
+/* 
+  ::-webkit-scrollbar
+  -> 스크롤바 전체
+
+  ::-webkit-scrollbar-thumb
+  -> 드래그가 가능한 스크롤 핸들 막대
+
+  ::-webkit-scrollbar-track
+  -> 스크롤바 트랙 (스크롤이 움직이는 영역)
+
+  ::-webkit-scrollbar-track-piece
+  -> 스크롤 핸들 막대 부분을 제외한 남은 빈 공간
+
+  ::-webkit-scrollbar-button
+  -> 스크롤바의 방향 버튼
+
+  ::-webkit-scrollbar-corner
+  -> 수평/수직 스크롤 막대가 만나는 스크롤 막대의 하단 모서리
+
+  ::-webkit-scrollbar-resizer
+  -> 스크롤바 코너에 나타나는 크기 조정 핸들
+*/
+
+.container::-webkit-scrollbar {
+  /* 
+    width : 세로축 스크롤바 폭 너비
+    height : 가로축 스크롤바 폭 너비
+  */
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+}
+.container::-webkit-scrollbar-thumb {
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  background-color: var(--accent-color);
+}
+.container::-webkit-scrollbar-thumb:hover {
+  border: 2px solid var(--hover-color);
+  background-color: var(--hover-color);
+}
+.container::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--common-color);
+}

@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/* layout */
+main {
+  padding: 0 0 100px 240px;
+}
+
+section {
+  margin: 80px auto;
+  padding: 0 36px;
+  width: 100%;
+  max-width: 1120px;
+}
+
+.featured {
+  display: flex;
+  gap: 40px;
+}
+.featured-thumb {
+  border-radius: 24px;
+}
+.featured-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+.featured-tag {
+  padding: 8px 16px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #18181b;
+  color: #565662;
+}
+.featured-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.featured-description {
+  color: #868686;
+  line-height: 1.5;
+}
+
+.section-title {
+  margin-bottom: 32px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.playlists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.playlist {
+  flex-basis: 22%;
+}
+.playlist-thumb {
+  width: 100%;
+  border-radius: 16px;
+}
+.playlist-title {
+  margin: 16px 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.playlist-artist {
+  color: #868686;
+}
+
+.artists {
+  display: flex;
+  gap: 32px;
+}
+.artist {
+  text-align: center;
+}
+.artist-profile {
+  width: 100%;
+}
+.artist-name {
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.stations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.station {
+  flex-basis: calc(100% / 3 - 24px);
+}
+.station-thumb {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.charts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.charts-title {
+  margin: 0;
+}
+
+.charts-see-all {
+  font-size: 24px;
+  font-weight: 500;
+  color: #d9d9d9;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.chart-cover {
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+}
+
+.chart-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.chart-rank {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chart-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+}
+.chart-change {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+}
+.chart-change.up {
+  color: #d93045;
+}
+
+.chart-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+.chart-artist {
+  font-size: 24px;
+  font-weight: 500;
+  color: #868686;
+}

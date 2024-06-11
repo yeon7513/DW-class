@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selector</title>
+    <link rel="stylesheet" href="./css/3_selector.css" />
+  </head>
+  <body>
+    <section>
+      <!-- id 선택자 -->
+      <div class="id-selector">
+        <h3>id selector</h3>
+        <p id="special">id가 special인 단락입니다.</p>
+        <p>id가 없는 단락입니다.</p>
+      </div>
+      <!-- class 선택자 -->
+      <div class="class-selector">
+        <h3>class selector</h3>
+        <p class="blue">나는 blue1이야.</p>
+        <p class="blue">나는 blue2이야.</p>
+        <p class="red">나는 red1이야.</p>
+        <p class="red">나는 red2이야.</p>
+      </div>
+      <!-- 자식 선택자 -->
+      <div class="children-selector">
+        <h3>children selector</h3>
+        <div>
+          <h4>이 제목은 <em>매우</em> 중요합니다.</h4>
+        </div>
+        <h4>이 제목은 <em>매우</em> 중요합니다.</h4>
+        <div class="children">
+          첫번째 div
+          <div class="children">
+            두번째 div
+            <div class="children">세번째 div</div>
+          </div>
+          <div class="children">
+            두번째 div
+            <div class="children">세번째 div</div>
+          </div>
+        </div>
+      </div>
+      <!-- 속성 선택자 -->
+      <div class="attr-selector">
+        <h3>attribute selecter</h3>
+        <div>
+          <a href="2_coffee.html" target="_blank">새로운 탭으로 열립니다.</a>
+          <a href="2_coffee.html" target="_self" title="coffee">현재 탭이 전환됩니다.</a>
+        </div>
+        <p title="title입니다.">title이 있는 p태그 입니다.</p>
+        <p>title이 없는 p태그입니다.</p>
+      </div>
+      <!-- 의사(가상) 선택자 -->
+      <div class="pseudo-selector">
+        <h3>pseudo selector</h3>
+        <a href="https://www.netflix.com" title="넷플릭스 페이지로 이동합니다." target="_blank">눈물의 여왕 보러가기</a>
+      </div>
+    </section>
+  </body>
+</html>

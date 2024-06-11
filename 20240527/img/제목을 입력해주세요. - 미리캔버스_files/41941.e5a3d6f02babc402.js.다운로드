@@ -1,0 +1,87 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[41941],{91241:function(e,t,r){r.d(t,{B:function(){return $e02a7d9cb1dc128c$export$c74125a8e3af6bb2}});var n=r(67294),o=r(8965),a=r(53444),i=r(33726);function $e02a7d9cb1dc128c$export$c74125a8e3af6bb2(e){let t=e+"CollectionProvider",[r,l]=(0,o.b)(t),[d,u]=r(t,{collectionRef:{current:null},itemMap:new Map}),c=e+"CollectionSlot",s=n.forwardRef((e,t)=>{let{scope:r,children:o}=e,l=u(c,r),d=(0,a.e)(t,l.collectionRef);return n.createElement(i.g,{ref:d},o)}),f=e+"CollectionItemSlot",p="data-radix-collection-item",m=n.forwardRef((e,t)=>{let{scope:r,children:o,...l}=e,d=n.useRef(null),c=(0,a.e)(t,d),s=u(f,r);return n.useEffect(()=>(s.itemMap.set(d,{ref:d,...l}),()=>void s.itemMap.delete(d))),n.createElement(i.g,{[p]:"",ref:c},o)});return[{Provider:e=>{let{scope:t,children:r}=e,o=n.useRef(null),a=n.useRef(new Map).current;return n.createElement(d,{scope:t,itemMap:a,collectionRef:o},r)},Slot:s,ItemSlot:m},function(t){let r=u(e+"CollectionConsumer",t),o=n.useCallback(()=>{let e=r.collectionRef.current;if(!e)return[];let t=Array.from(e.querySelectorAll(`[${p}]`)),n=Array.from(r.itemMap.values()),o=n.sort((e,r)=>t.indexOf(e.ref.current)-t.indexOf(r.ref.current));return o},[r.collectionRef,r.itemMap]);return o},l]}},82845:function(e,t,r){r.d(t,{T:function(){return $71cd76cc60e0454e$export$6f32135080cb4c3}});var n=r(67294),o=r(9809);function $71cd76cc60e0454e$export$6f32135080cb4c3({prop:e,defaultProp:t,onChange:r=()=>{}}){let[a,i]=function({defaultProp:e,onChange:t}){let r=(0,n.useState)(e),[a]=r,i=(0,n.useRef)(a),l=(0,o.W)(t);return(0,n.useEffect)(()=>{i.current!==a&&(l(a),i.current=a)},[a,i,l]),r}({defaultProp:t,onChange:r}),l=void 0!==e,d=l?e:a,u=(0,o.W)(r),c=(0,n.useCallback)(t=>{if(l){let r="function"==typeof t?t(e):t;r!==e&&u(r)}else i(t)},[l,e,i,u]);return[d,c]}},16457:function(e,t,r){r.d(t,{D:function(){return $010c2913dbd2fe3d$export$5cae361ad82dce8b}});var n=r(67294);function $010c2913dbd2fe3d$export$5cae361ad82dce8b(e){let t=(0,n.useRef)({value:e,previous:e});return(0,n.useMemo)(()=>(t.current.value!==e&&(t.current.previous=t.current.value,t.current.value=e),t.current.previous),[e])}},10175:function(e,t,r){r.d(t,{t:function(){return $db6c3485150b8e66$export$1ab7ae714698c4b8}});var n=r(67294),o=r(91732);function $db6c3485150b8e66$export$1ab7ae714698c4b8(e){let[t,r]=(0,n.useState)(void 0);return(0,o.b)(()=>{if(e){r({width:e.offsetWidth,height:e.offsetHeight});let t=new ResizeObserver(t=>{let n,o;if(!Array.isArray(t)||!t.length)return;let a=t[0];if("borderBoxSize"in a){let e=a.borderBoxSize,t=Array.isArray(e)?e[0]:e;n=t.inlineSize,o=t.blockSize}else n=e.offsetWidth,o=e.offsetHeight;r({width:n,height:o})});return t.observe(e,{box:"border-box"}),()=>t.unobserve(e)}r(void 0)},[e]),t}},76406:function(e,t,r){r.d(t,{i:function(){return Slider}});var n=r(85893),o=r(56846),a=r(67294),i=r(99476),l=r(74553),d=r(53444),u=r(8965),c=r(82845),s=r(66728),f=r(16457),p=r(10175),m=r(7011),b=r(91241);let h=["PageUp","PageDown"],g=["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"],v={"from-left":["Home","PageDown","ArrowDown","ArrowLeft"],"from-right":["Home","PageDown","ArrowDown","ArrowRight"],"from-bottom":["Home","PageDown","ArrowDown","ArrowLeft"],"from-top":["Home","PageDown","ArrowUp","ArrowLeft"]},_="Slider",[w,S,$]=(0,b.B)(_),[x,y]=(0,u.b)(_,[$]),[k,E]=x(_),P=(0,a.forwardRef)((e,t)=>{let{name:r,min:n=0,max:u=100,step:s=1,orientation:f="horizontal",disabled:p=!1,minStepsBetweenThumbs:m=0,defaultValue:b=[n],value:v,onValueChange:_=()=>{},onValueCommit:S=()=>{},inverted:$=!1,...x}=e,[y,E]=(0,a.useState)(null),P=(0,d.e)(t,e=>E(e)),C=(0,a.useRef)(new Set),D=(0,a.useRef)(0),V=!y||!!y.closest("form"),A="horizontal"===f?R:M,[I=[],z]=(0,c.T)({prop:v,defaultProp:b,onChange:e=>{var t;let r=[...C.current];null===(t=r[D.current])||void 0===t||t.focus(),_(e)}}),T=(0,a.useRef)(I);function updateValues(e,t,{commit:r}={commit:!1}){let o=(String(s).split(".")[1]||"").length,a=function(e,t){let r=Math.pow(10,t);return Math.round(e*r)/r}(Math.round((e-n)/s)*s+n,o),l=(0,i.u)(a,[n,u]);z((e=[])=>{let n=function(e=[],t,r){let n=[...e];return n[r]=t,n.sort((e,t)=>e-t)}(e,l,t);if(!function(e,t){if(t>0){let r=e.slice(0,-1).map((t,r)=>e[r+1]-t);return Math.min(...r)>=t}return!0}(n,m*s))return e;{D.current=n.indexOf(l);let t=String(n)!==String(e);return t&&r&&S(n),t?n:e}})}return(0,a.createElement)(k,{scope:e.__scopeSlider,disabled:p,min:n,max:u,valueIndexToChangeRef:D,thumbs:C.current,values:I,orientation:f},(0,a.createElement)(w.Provider,{scope:e.__scopeSlider},(0,a.createElement)(w.Slot,{scope:e.__scopeSlider},(0,a.createElement)(A,(0,o.Z)({"aria-disabled":p,"data-disabled":p?"":void 0},x,{ref:P,onPointerDown:(0,l.M)(x.onPointerDown,()=>{p||(T.current=I)}),min:n,max:u,inverted:$,onSlideStart:p?void 0:function(e){let t=function(e,t){if(1===e.length)return 0;let r=e.map(e=>Math.abs(e-t)),n=Math.min(...r);return r.indexOf(n)}(I,e);updateValues(e,t)},onSlideMove:p?void 0:function(e){updateValues(e,D.current)},onSlideEnd:p?void 0:function(){let e=T.current[D.current],t=I[D.current];t!==e&&S(I)},onHomeKeyDown:()=>!p&&updateValues(n,0,{commit:!0}),onEndKeyDown:()=>!p&&updateValues(u,I.length-1,{commit:!0}),onStepKeyDown:({event:e,direction:t})=>{if(!p){let r=h.includes(e.key),n=r||e.shiftKey&&g.includes(e.key),o=D.current,a=I[o],i=s*(n?10:1)*t;updateValues(a+i,o,{commit:!0})}}})))),V&&I.map((e,t)=>(0,a.createElement)($faa2e61a3361514f$var$BubbleInput,{key:t,name:r?r+(I.length>1?"[]":""):void 0,value:e})))}),[C,D]=x(_,{startEdge:"left",endEdge:"right",size:"width",direction:1}),R=(0,a.forwardRef)((e,t)=>{let{min:r,max:n,dir:i,inverted:l,onSlideStart:u,onSlideMove:c,onSlideEnd:f,onStepKeyDown:p,...m}=e,[b,h]=(0,a.useState)(null),g=(0,d.e)(t,e=>h(e)),_=(0,a.useRef)(),w=(0,s.g)(i),S="ltr"===w,$=S&&!l||!S&&l;function getValueFromPointer(e){let t=_.current||b.getBoundingClientRect(),o=[0,t.width],a=$faa2e61a3361514f$var$linearScale(o,$?[r,n]:[n,r]);return _.current=t,a(e-t.left)}return(0,a.createElement)(C,{scope:e.__scopeSlider,startEdge:$?"left":"right",endEdge:$?"right":"left",direction:$?1:-1,size:"width"},(0,a.createElement)(V,(0,o.Z)({dir:w,"data-orientation":"horizontal"},m,{ref:g,style:{...m.style,"--radix-slider-thumb-transform":"translateX(-50%)"},onSlideStart:e=>{let t=getValueFromPointer(e.clientX);null==u||u(t)},onSlideMove:e=>{let t=getValueFromPointer(e.clientX);null==c||c(t)},onSlideEnd:()=>{_.current=void 0,null==f||f()},onStepKeyDown:e=>{let t=v[$?"from-left":"from-right"].includes(e.key);null==p||p({event:e,direction:t?-1:1})}})))}),M=(0,a.forwardRef)((e,t)=>{let{min:r,max:n,inverted:i,onSlideStart:l,onSlideMove:u,onSlideEnd:c,onStepKeyDown:s,...f}=e,p=(0,a.useRef)(null),m=(0,d.e)(t,p),b=(0,a.useRef)(),h=!i;function getValueFromPointer(e){let t=b.current||p.current.getBoundingClientRect(),o=[0,t.height],a=$faa2e61a3361514f$var$linearScale(o,h?[n,r]:[r,n]);return b.current=t,a(e-t.top)}return(0,a.createElement)(C,{scope:e.__scopeSlider,startEdge:h?"bottom":"top",endEdge:h?"top":"bottom",size:"height",direction:h?1:-1},(0,a.createElement)(V,(0,o.Z)({"data-orientation":"vertical"},f,{ref:m,style:{...f.style,"--radix-slider-thumb-transform":"translateY(50%)"},onSlideStart:e=>{let t=getValueFromPointer(e.clientY);null==l||l(t)},onSlideMove:e=>{let t=getValueFromPointer(e.clientY);null==u||u(t)},onSlideEnd:()=>{b.current=void 0,null==c||c()},onStepKeyDown:e=>{let t=v[h?"from-bottom":"from-top"].includes(e.key);null==s||s({event:e,direction:t?-1:1})}})))}),V=(0,a.forwardRef)((e,t)=>{let{__scopeSlider:r,onSlideStart:n,onSlideMove:i,onSlideEnd:d,onHomeKeyDown:u,onEndKeyDown:c,onStepKeyDown:s,...f}=e,p=E(_,r);return(0,a.createElement)(m.W.span,(0,o.Z)({},f,{ref:t,onKeyDown:(0,l.M)(e.onKeyDown,e=>{"Home"===e.key?(u(e),e.preventDefault()):"End"===e.key?(c(e),e.preventDefault()):h.concat(g).includes(e.key)&&(s(e),e.preventDefault())}),onPointerDown:(0,l.M)(e.onPointerDown,e=>{let t=e.target;t.setPointerCapture(e.pointerId),e.preventDefault(),p.thumbs.has(t)?t.focus():n(e)}),onPointerMove:(0,l.M)(e.onPointerMove,e=>{let t=e.target;t.hasPointerCapture(e.pointerId)&&i(e)}),onPointerUp:(0,l.M)(e.onPointerUp,e=>{let t=e.target;t.hasPointerCapture(e.pointerId)&&(t.releasePointerCapture(e.pointerId),d(e))})}))}),A=(0,a.forwardRef)((e,t)=>{let{__scopeSlider:r,...n}=e,i=E("SliderTrack",r);return(0,a.createElement)(m.W.span,(0,o.Z)({"data-disabled":i.disabled?"":void 0,"data-orientation":i.orientation},n,{ref:t}))}),I="SliderRange",z=(0,a.forwardRef)((e,t)=>{let{__scopeSlider:r,...n}=e,i=E(I,r),l=D(I,r),u=(0,a.useRef)(null),c=(0,d.e)(t,u),s=i.values.length,f=i.values.map(e=>$faa2e61a3361514f$var$convertValueToPercentage(e,i.min,i.max));return(0,a.createElement)(m.W.span,(0,o.Z)({"data-orientation":i.orientation,"data-disabled":i.disabled?"":void 0},n,{ref:c,style:{...e.style,[l.startEdge]:(s>1?Math.min(...f):0)+"%",[l.endEdge]:100-Math.max(...f)+"%"}}))}),T="SliderThumb",Z=(0,a.forwardRef)((e,t)=>{let r=S(e.__scopeSlider),[n,i]=(0,a.useState)(null),l=(0,d.e)(t,e=>i(e)),u=(0,a.useMemo)(()=>n?r().findIndex(e=>e.ref.current===n):-1,[r,n]);return(0,a.createElement)(W,(0,o.Z)({},e,{ref:l,index:u}))}),W=(0,a.forwardRef)((e,t)=>{var r;let{__scopeSlider:n,index:i,...u}=e,c=E(T,n),s=D(T,n),[f,b]=(0,a.useState)(null),h=(0,d.e)(t,e=>b(e)),g=(0,p.t)(f),v=c.values[i],_=void 0===v?0:$faa2e61a3361514f$var$convertValueToPercentage(v,c.min,c.max),S=(r=c.values.length)>2?`Value ${i+1} of ${r}`:2===r?["Minimum","Maximum"][i]:void 0,$=null==g?void 0:g[s.size],x=$?function(e,t,r){let n=e/2,o=$faa2e61a3361514f$var$linearScale([0,50],[0,n]);return(n-o(t)*r)*r}($,_,s.direction):0;return(0,a.useEffect)(()=>{if(f)return c.thumbs.add(f),()=>{c.thumbs.delete(f)}},[f,c.thumbs]),(0,a.createElement)("span",{style:{transform:"var(--radix-slider-thumb-transform)",position:"absolute",[s.startEdge]:`calc(${_}% + ${x}px)`}},(0,a.createElement)(w.ItemSlot,{scope:e.__scopeSlider},(0,a.createElement)(m.W.span,(0,o.Z)({role:"slider","aria-label":e["aria-label"]||S,"aria-valuemin":c.min,"aria-valuenow":v,"aria-valuemax":c.max,"aria-orientation":c.orientation,"data-orientation":c.orientation,"data-disabled":c.disabled?"":void 0,tabIndex:c.disabled?void 0:0},u,{ref:h,style:void 0===v?{display:"none"}:e.style,onFocus:(0,l.M)(e.onFocus,()=>{c.valueIndexToChangeRef.current=i})}))))}),$faa2e61a3361514f$var$BubbleInput=e=>{let{value:t,...r}=e,n=(0,a.useRef)(null),i=(0,f.D)(t);return(0,a.useEffect)(()=>{let e=n.current,r=window.HTMLInputElement.prototype,o=Object.getOwnPropertyDescriptor(r,"value"),a=o.set;if(i!==t&&a){let r=new Event("input",{bubbles:!0});a.call(e,t),e.dispatchEvent(r)}},[i,t]),(0,a.createElement)("input",(0,o.Z)({style:{display:"none"}},r,{ref:n,defaultValue:t}))};function $faa2e61a3361514f$var$convertValueToPercentage(e,t,r){return(0,i.u)(100/(r-t)*(e-t),[0,100])}function $faa2e61a3361514f$var$linearScale(e,t){return r=>{if(e[0]===e[1]||t[0]===t[1])return t[0];let n=(t[1]-t[0])/(e[1]-e[0]);return t[0]+n*(r-e[0])}}let getDefaultFigmaProps=e=>({type:e.type??"basic",value:e.value??e.min??0,min:e.min??0,max:e.max??100,disabled:e.disabled??!1,startColor:e.startColor??"#0399FB",endColor:e.endColor??"#FAA904"}),getPrimitivePropsOnly=e=>{let{type:t,value:r,min:n,max:o,disabled:a,startColor:i,endColor:l,...d}=e;return d};var K=r(88095);let Slider=e=>{let t=getPrimitivePropsOnly(e),r=getDefaultFigmaProps(e),o=(0,a.useRef)(null),i=(0,a.useCallback)(()=>{setThumbDragging(o.current,!0)},[]),l=(0,a.useCallback)(()=>{setThumbDragging(o.current,!1)},[]),d=(0,a.useCallback)(t=>{e.onChange(t)},[e.onChange]),u=(0,a.useCallback)(t=>{e.onCommit?.(t)},[e.onCommit]);return(0,n.jsxs)(F,{defaultValue:[r.value],value:[e.value??0],min:r.min,max:r.max,disabled:r.disabled,onValueChange:e=>d(e[0]),onValueCommit:e=>u(e[0]),onPointerDown:i,onPointerUp:l,step:e.step,"data-ds-type":r.type,...t,children:[(0,n.jsx)(B,{$figmaProps:r,children:(0,n.jsx)(j,{})}),(0,n.jsx)(H,{"aria-grabbed":"false",ref:o})]})},F=(0,K.ZP)(P)`
+  width: 100%;
+  height: ${({theme:e})=>e.token.c_slider_size_handle};
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  cursor: pointer;
+
+  &[aria-disabled='true'] {
+    pointer-events: none;
+    opacity: ${({theme:e})=>e.token.c_slider_opacity_disabled};
+  }
+`,B=(0,K.ZP)(A)`
+  background: ${({theme:e})=>e.token.c_slider_color_background_track_basic};
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: ${({theme:e})=>e.token.c_slider_size_height_track};
+  outline: none;
+
+  [data-ds-type='rainbow'] & {
+    background: ${({theme:e})=>e.token.c_slider_color_background_track_colorTone};
+  }
+
+  [data-ds-type='gradient'] & {
+    background: ${({$figmaProps:e})=>`linear-gradient(90deg, ${e.startColor} 0%, ${e.endColor} 100%)`};
+  }
+`,j=(0,K.ZP)(z)`
+  position: absolute;
+  border-radius: 9999px;
+  height: 100%;
+
+  [data-ds-type='basic'] & {
+    background-color: ${({theme:e})=>e.token.c_slider_color_background_activeTrack_basic};
+  }
+`,H=(0,K.ZP)(Z)`
+  display: block;
+  width: ${({theme:e})=>e.token.c_slider_size_handle};
+  height: ${({theme:e})=>e.token.c_slider_size_handle};
+  border-radius: ${({theme:e})=>e.token.c_slider_radius_handle};
+  background-color: ${({theme:e})=>e.token.c_slider_color_background_handle};
+  border-width: ${({theme:e})=>e.token.c_slider_borderWidth_handle};
+  border-style: solid;
+  border-color: ${({theme:e})=>e.token.c_slider_color_border_handle_enabled};
+  outline: none;
+  cursor: grab;
+
+  ${({theme:e})=>e.mixin.hoverDesktopOnly(K.iv`
+      &:hover {
+        background-color: ${e.token.c_slider_color_background_handle};
+        border-color: ${e.token.c_slider_color_border_handle_interaction};
+      }
+    `)}
+
+  &[aria-grabbed='true'] {
+    cursor: grabbing;
+    box-shadow: ${({theme:e})=>`0 0 0 8px ${e.token.c_slider_color_background_handleStateLayer}`};
+    // 모바일에서는 hover 가 존재하지 않으므로, hover 일때 스타일링을 grabbed 일때 추가해준다.
+    background-color: ${({theme:e})=>e.token.c_slider_color_background_handle};
+    border-color: ${({theme:e})=>e.token.c_slider_color_border_handle_interaction};
+  }
+
+  /* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    // 44px 로 하고싶었으나, 44px 로 하면 SliderWithInput 에서 Input 컴포넌트와 Slider 의 거리가 12px 이라 Input 클릭이 안돼는 사이드이펙트가 생길수도 있을 것 같았음.
+    min-width: 36px;
+    min-height: 36px;
+  }
+`,setThumbDragging=(e,t)=>{e&&e.setAttribute("aria-grabbed",t?"true":"false")}},41941:function(e,t,r){r.d(t,{G:function(){return SliderWithInput}});var n=r(85893),o=r(88095),a=r(65333),i=r(76406),l=r(82274);let SliderWithInput=e=>{let{disabled:t,value:r,min:o=0,max:c=100,label:s,hierarchy:f,showLabelIcon:p=!1,type:m,step:b,onChangeSlider:h,onCommitSlider:g,onBlur:v,onEnter:_,unit:w="none",callbackProps:S,inputType:$,enterKeyHint:x}=e;return(0,n.jsxs)(d,{children:[(0,n.jsxs)(u,{children:[(0,n.jsx)(a._,{text:s,hierarchy:f,showInfoIcon:p}),(0,n.jsx)(l.c,{type:$,enterKeyHint:x,state:t?"disabled":"enabled",size:"S",value:r,min:o,max:c,unit:w,inputMode:"decimal",onEnterValue:_,onBlurValue:v,callbackProps:S})]}),(0,n.jsx)(i.i,{type:m,min:o,max:c,value:r,step:b,disabled:t,onChange:h,onCommit:g})]})},d=o.ZP.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`,u=o.ZP.div`
+  display: grid;
+  grid-template-columns: 1fr 68px;
+  width: 100%;
+`}}]);

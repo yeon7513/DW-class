@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+div#inner {
+  margin: 20px auto 0;
+  width: 80%;
+}
+h1 {
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
+
+
+p.date {
+  padding: 0 15px;
+  height: 100px;
+  text-align: right;
+  color: indigo;
+  background-color: yellow;
+  box-sizing: border-box;
+  line-height: 3;
+}
+
+p.poet {
+  color: blue;
+  /* letter-spacing: 10px; */
+  word-spacing: 10px;
+}
+
+p.indent {
+  display: inline-block;
+  outline: 1px dotted green;
+  text-indent: 30px;
+}
+
+.align {
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px dashed tan;
+  text-align: center;
+  color: green;
+  box-sizing: border-box;
+}
+.align span {
+  text-decoration: underline;
+}
+
+#direction {
+  direction: rtl;
+  color: yellow;
+  background-color: #000;
+}
+
+.deco {
+  /* text-decoration: overline; */
+  /* text-decoration: line-through dotted blue; */
+  text-decoration: underline wavy palevioletred;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.shadow {
+  font-size: 40px;
+  text-shadow: 0 3px 5px orange;
+}

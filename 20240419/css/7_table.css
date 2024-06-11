@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+div {
+  margin: 50px auto;
+  width: 500px;
+}
+
+/* table 연습 */
+div.vip-list table, th, td {
+  border: 1px dotted orange;
+}
+
+.vip-list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px 30px;
+  text-align: center;
+}
+.vip-list table th {
+  height: 50px;
+  vertical-align: top;
+  
+}
+.vip-list table tr td {
+  height: 50px;
+  vertical-align: bottom;
+  
+}
+.vip-list table caption {
+  text-transform: uppercase;
+  caption-side: bottom;
+}
+
+/* nth */
+.nth table, tr, td {
+  border: 1px dotted grey;
+}
+.nth table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+.nth table tr:first-child td {
+  background-color: royalblue;
+  border: 1px solid #000;
+  color: #fff;
+}
+.nth table tr td {
+  padding: 5px;
+}
+.nth table tr:not(:first-child):nth-child(2n+1) {
+  background-color: #eee;
+}

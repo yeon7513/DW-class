@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+header {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: yellow;
+}
+main {
+  display: flex;
+  flex-grow: 5;
+}
+main nav {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: red;
+  color: #fff;
+}
+main aside {
+  flex-grow: 3;
+  padding: 20px;
+  background-color: blue;
+  color: #fff;
+}
+footer {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: aqua;
+}
+
+@media (max-width: 900px) and (min-width: 500px) {
+  main {
+    flex-direction: column;
+  }
+  main aside {
+    background-color: green;
+  }
+}
+@media (max-width: 499px) {
+  main {
+    flex-direction: column;
+  }
+  main aside {
+    background-color: coral;
+  }
+}

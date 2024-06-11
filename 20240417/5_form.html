@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <style>
+      input[type="file"] {
+        display: block;
+        margin: 5px 0 10px 0;
+        padding: 10px 0;
+        border-top: 1px dotted #000;
+        border-bottom: 1px dotted #000;
+      }
+      div {
+        margin-top: 10px;
+        padding: 10px 0;
+      }
+      div span {
+        display: block;
+      }
+      form {
+        margin-bottom: 20px;
+        padding: 5px 10px 10px 10px;
+        width: 400px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+      label {
+        display: block;
+        padding: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="input">
+      <label>사용자 아이디 : <input type="text" name="user" /></label>
+      <label>이메일 : <input type="email" name="email" required /></label>
+      <label>전화번호 : <input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" title="010-1234-1234" /></label>
+      <input type="file" accept="image/jpeg, image/gif" />
+      <input type="hidden" value="hiddenValue" />
+      <input type="submit" value="제출" />
+      <input type="reset" value="초기화" />
+    </form>
+    <button onclick="alert('안녕하세요?')">눌러보세요!</button>
+    <div>
+      <span>고객의 의견</span>
+      <textarea name="feedback" cols="40" rows="5"></textarea>
+    </div>
+  </body>
+</html>

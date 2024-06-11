@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* common font-family */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+
+/* layout */
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+#wrapper > div {
+  padding: 20px;
+  width: 500px;
+  border-radius: 20px;
+}
+#wrapper > div h3 {
+  margin-bottom: 10px;
+}
+#wrapper > div ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.number {
+  border: 1px solid palegreen;
+  background-color: rgba(152, 251, 152, 0.3);
+}
+.string {
+  border: 1px solid palevioletred;
+  background-color: rgba(216, 112, 147, 0.3);
+}
+
+.compare {
+  border: 1px solid palegoldenrod;
+  background-color: rgba(238, 232, 170, 0.3);
+}

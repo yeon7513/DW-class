@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>label</title>
+    <style>
+      div {
+        margin-bottom: 20px;
+        padding: 10px;
+        width: 300px;
+        border: 1px dashed #333;
+        box-sizing: border-box;
+      }
+      label {
+        display: block;
+      }
+      input[type="submit"] {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="male">
+        남성
+        <input type="radio" name="gender" id="male" value="male" />
+      </label>
+      <label for="female">
+        여성
+        <input type="radio" name="gender" id="female" value="female" />
+      </label>
+      <input type="submit" value="제출" />
+    </div>
+    <div>
+      <label for="samsung"><input type="checkbox" id="samsung" name="notebook" />삼성노트북</label>
+      <label for="LG"><input type="checkbox" id="LG" name="notebook" />LG노트북</label>
+      <label for="MAC"><input type="checkbox" id="MAC" name="notebook" />맥북</label>
+      <label for="ASUS"><input type="checkbox" id="ASUS" name="notebook" />아수스노트북</label>
+    </div>
+  </body>
+</html>

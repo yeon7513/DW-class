@@ -1,0 +1,205 @@
+@charset "utf-8";
+
+/* common font-family */
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'EF_watermelonSalad';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_watermelonSalad.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'EF_watermelonSalad', monospace;}
+
+/* colors */
+:root {
+  --main-color: #F5F5F5;
+  --common-color: #4D4C7D;
+  --accent-color: #F99417;
+  --hover-color: #363062;
+}
+
+/* common */
+html, body {
+  /* width: 100%;
+  height: 100%; */
+  background-color: var(--main-color);
+}
+
+/* layout */
+#wrapper > div {
+  padding: 50px 20px;
+  border-bottom: 1px solid var(--common-color);
+}
+
+.even-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.even-number h3 {
+  margin-bottom: 10px;
+  color: var(--common-color);
+}
+.even-number p {
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+.even-number span {
+  font-weight: 600;
+}
+.even-number > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.star-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 10px;
+}
+
+.star-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px;
+  background-color: var(--hover-color);
+  border-radius: 20px;
+}
+
+.star-item h3 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--main-color);
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+/* 별찍기 */
+.star-item > div {
+  margin-top: 10px;
+  color: var(--accent-color);
+  font-weight: 300;
+  line-height: 0.4;
+}
+.star-item span {
+  font-size: 35px;
+}
+.star-item span.nbsp {
+  font-size: 23px;
+}
+
+/* 1부터 사용자가 입력한 숫자만큼의 합 */
+.input-sum {
+  text-align: center;
+}
+.input-sum h3 {
+  color: var(--common-color);
+}
+.input-sum form {
+  padding: 20px;
+}
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.input-group input {
+  padding: 5px;
+  width: 120px;
+  border: 0;
+  border: 2px solid var(--hover-color);
+  outline: 0;
+  text-align: center;
+}
+.input-group input:focus {
+  border: 0;
+  outline: 0;
+  border: 2px solid var(--accent-color);
+  transition: 0.3s;
+}
+.input-group input::placeholder {
+  /* opacity: 1; */
+  transition: 0.3s linear;
+}
+.input-group input:focus::placeholder {
+  opacity: 0;
+}
+.input-group button {
+  appearance: none;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--common-color);
+  color: var(--main-color);
+  cursor: pointer;
+  transition: .3s;
+}
+.input-group button:hover {
+  background-color: var(--hover-color);
+}
+
+.input-sum p span {
+  font-weight: 800;
+  font-size: 20px;
+}
+.input-sum p span.sum-result {
+  color: var(--accent-color);
+}
+
+/* 구구단 만들기 */
+.multiplication-tables {
+  text-align: center;
+}
+.multiplication-tables h3 {
+  margin-bottom: 10px;
+  color: var(--common-color);
+}
+.multiplication-tables table {
+  margin: 0 auto;
+  border: 3px solid var(--common-color);
+  border-collapse: collapse;
+}
+
+.multiplication-tables > table td {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--common-color);
+}
+.table-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 20px auto 0;
+}
+.table-items > table {
+  width: 100%;
+}
+.table-items > table th {
+  padding: 10px 0;
+  background-color: var(--common-color);
+  color: var(--main-color);
+}
+.table-items > table td {
+  padding: 10px 20px;
+  border: 1px dotted var(--common-color);
+}
+.table-items > table td span {
+  font-weight: 800;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Shopping</title>
+    <link rel="stylesheet" href="./css/1_shopping.css" />
+    <script defer src="./js/1_shopping.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <div class="logo radius">
+          <img src="./images/shoppingbag.png" alt="web shopping" />
+          <h1><a href="#">Web Shopping</a></h1>
+        </div>
+        <nav class="radius">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">shopping about</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">my account</a></li>
+            <li><a href="#">contacts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="category radius">
+          <h3>카테고리</h3>
+          <ul>
+            <li><a href="#">컴퓨터</a></li>
+            <li><a href="#">의류</a></li>
+            <li><a href="#">음악</a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">스포츠/레저</a></li>
+            <li><a href="#">가구/인테리어</a></li>
+            <li><a href="#">식품</a></li>
+          </ul>
+        </section>
+        <section class="product">
+          <div class="product-item">
+            <div class="product-img">
+              <img src="./images/desktop.webp" alt="데스크톱" />
+            </div>
+            <div class="product-contents">
+              <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illo ab ad reiciendis distinctio libero. Atque impedit, explicabo odio ullam mollitia, consectetur, omnis iste nulla tenetur facilis nam recusandae nesciunt!</p>
+              <div class="product-btn btn">
+                <button>쇼핑카트에 추가하기</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img">
+              <img src="./images/notebook.png" alt="노트북" />
+            </div>
+            <div class="product-contents">
+              <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illo ab ad reiciendis distinctio libero. Atque impedit, explicabo odio ullam mollitia, consectetur, omnis iste nulla tenetur facilis nam recusandae nesciunt!</p>
+              <div class="product-btn btn">
+                <button>쇼핑카트에 추가하기</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-item">
+            <div class="product-img">
+              <img src="./images/moniter.png" alt="모니터" />
+            </div>
+            <div class="product-contents">
+              <h4><a href="#">Lorem ipsum dolor sit amet</a></h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illo ab ad reiciendis distinctio libero. Atque impedit, explicabo odio ullam mollitia, consectetur, omnis iste nulla tenetur facilis nam recusandae nesciunt!</p>
+              <div class="product-btn btn">
+                <button>쇼핑카트에 추가하기</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="cart radius">
+          <div class="cart-view">
+            <h3>Shopping Cart</h3>
+            <p>현재 쇼핑카트에 물품이 없습니다.</p>
+            <a href="#">쇼핑카트 보기</a>
+          </div>
+          <div class="log-in">
+            <h3>Log In</h3>
+            <form>
+              <div class="input-group">
+                <input type="text" id="id" />
+                <label for="id">아이디</label>
+                <input type="password" id="pw" />
+                <label for="pw">패스워드</label>
+              </div>
+              <div class="cart-btn btn">
+                <input type="submit" value="로그인" />
+                <input type="reset" value="초기화" />
+              </div>
+              <div class="join-find">
+                <a href="#">회원가입</a>
+                <a href="#">비밀번호 분실</a>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="radius">
+        <span id="date"></span>
+        <small> DW아카데미 042-123-4567 </small>
+      </footer>
+    </div>
+  </body>
+</html>

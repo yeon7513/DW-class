@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+/* common font-family */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* reset */
+* {margin: 0; padding: 0;}
+a {text-decoration: none; color: inherit;}
+li {list-style: none;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif;}
+
+
+/* layout */
+div {
+  margin: 50px;
+}
+img {
+  transition: all 0.5s linear;
+}
+img:hover {
+  /* 
+    drop-shadow(h-shadow v-shadow blur spread color) 
+    h-shadow : 필수. 가로 그림자의 픽셀값(음수값은 그림자의 위치가 왼쪽으로 간다.)
+    v-shadow : 필수. 세로 그림자의 픽셀값(음수값은 그림자의 위치가 위쪽으로 간다.)
+    blur : 선택. 흐림정도의 픽셀값(음수값 비허용)
+    spread : 선택. 번짐정도의 픽셀값(음수값 허용) - 웬만한 브라우저에서는 지원하지않는다.
+    color : 선택. 그림자의 색상 (기본은 #000)
+  */
+  filter: drop-shadow(10px 10px 10px orange);
+  -webkit-filter: drop-shadow(10px 10px 10px orange); /* 크롬 (spread 불가) */
+  -o-filter: drop-shadow(10px 10px 10px orange); /* 오페라 (spread 불가) */
+  -ms-filter: drop-shadow(10px 10px 10px orange); /* 익스플로러, 엣지 (spread 불가) */
+  -moz-filter: drop-shadow(10px 10px 10px 10px orange); /* 파이어폭스 (spread 가능) */
+
+  /* 흑백 */
+  filter: grayscale(100%);
+
+  /* 세피아 */
+  filter: sepia(100%);
+
+  /* 
+    hue-rotate : 이미지 색조 회전을 적용한다. 
+    색조 회전? -> rgb 색상원을 12시 방향을 기준으로 0도, 입력한 각도만큼 돌아감.
+    다 돌아가면 마지막 각도에서 고정됨.
+  */
+  filter: hue-rotate(240deg);
+}

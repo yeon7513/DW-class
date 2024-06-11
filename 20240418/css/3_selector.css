@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+/* common */
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  padding: 20px;
+}
+div[class$="selector"] {
+  padding: 20px;
+  border: 1px dotted #000;
+  text-align: center;
+  box-sizing: border-box;
+}
+h3 {
+  margin-bottom: 10px;
+}
+p {
+  padding: 5px 0;
+}
+p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* id selector */
+.id-selector p {
+  background: yellow;
+  color: red;
+}
+#special {
+  color: blue;
+}
+
+/* class selector */
+.class-selector .blue {
+  color: blue;
+}
+.class-selector .red {
+  color: red;
+}
+
+/* children selector */
+.children-selector div {
+  margin-bottom: 5px;
+}
+.children-selector em {
+  color: red;
+}
+.children-selector > h4 {
+  margin-bottom: 20px;
+  color: blue;
+}
+.children-selector .children {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.children-selector > .children {
+  margin: 0 auto;
+  width: 245px;
+  border: 3px solid red;
+}
+.children-selector > .children > .children {
+  border: 3px solid orange;
+}
+.children-selector > .children > .children > .children {
+  border: 3px solid yellow;
+}
+
+/* attribute selector */
+.attr-selector > div {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  height: 50px;
+  background-color: honeydew;
+  box-sizing: border-box;
+}
+.attr-selector a {
+  transition: 0.3s;
+}
+.attr-selector a:hover {
+  font-size: 1.125rem;
+}
+.attr-selector a[target="_blank"]:hover {
+  color: palegreen;
+}
+.attr-selector a[target="_self"]:hover {
+  color: palegoldenrod;
+}
+.attr-selector p[title] {
+  background-color: burlywood;
+  color: #fff;
+  font-weight: bold;
+}
+.attr-selector [title] {
+  font-style: italic;
+}
+
+/* pseudo selector */
+.pseudo-selector a {
+  display: inline-block;
+  padding: 5px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+.pseudo-selector a:link {
+  color: white;
+  background-color: red;
+}
+.pseudo-selector a:visited {
+  color: green;
+  background-color: silver;
+}
+.pseudo-selector a:hover {
+  color: red;
+  background-color: yellow;
+}
+.pseudo-selector a:active {
+  color: wheat;
+  background-color: purple;
+}

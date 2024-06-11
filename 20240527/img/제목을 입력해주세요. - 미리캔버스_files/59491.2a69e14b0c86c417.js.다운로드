@@ -1,0 +1,201 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[59491],{35923:function(e,t,o){o.d(t,{C:function(){return getDefaultDropdownFieldProps}});let getDefaultDropdownFieldProps=e=>({cancellable:e.cancellable??!1,value:e.value??"",widthType:e.widthType??"fill",size:e.size??"M",textOverflow:e.textOverflow??"ellipsis",placeholder:e.placeholder??"",disabled:e.disabled??!1,error:e.error??!1,readOnly:e.readOnly??!1,placement:e.placement??"bottom-start",background:e.background??"background"})},6201:function(e,t,o){o.d(t,{W:function(){return DropdownTrigger}});var r=o(85893),n=o(88095),i=o(35923),d=o(25265),l=o(69121),c=o(54692);let DropdownTrigger=e=>{let t=(0,n.Fg)(),o=(0,i.C)(e),h=e.cancellable&&!e.readOnly,u=!(e.disabled||e.readOnly);return(0,r.jsxs)(a,{isSelected:e.open,onClick:()=>{u&&e.onClick?.()},figmaProps:o,children:[(0,r.jsxs)(s,{children:[h&&(0,r.jsxs)(_,{figmaProps:o,onClick:t=>{t.stopPropagation(),e.onClickCancelButton?.()},children:[(0,r.jsx)(d.h,{iconName:"chevron_left",color:"neutralLight",type:"ghost"}),(0,r.jsx)(l.x,{transparent:!1,paddingSize:"S",paddingPosition:"right"})]}),(0,r.jsx)(p,{figmaProps:o,children:e.value||e.placeholder})]}),e.open?(0,r.jsx)(c.J,{color:t.token[`c_dropdownField_color_contents_icon_arrow_${e.disabled?"disabled":"enabled"}`],iconName:"chevron_up",width:t.token.c_dropdownField_size_icon_arrow_M,height:t.token.c_dropdownField_size_icon_arrow_M}):(0,r.jsx)(c.J,{color:t.token[`c_dropdownField_color_contents_icon_arrow_${e.disabled?"disabled":"enabled"}`],iconName:"chevron_down",width:t.token.c_dropdownField_size_icon_arrow_M,height:t.token.c_dropdownField_size_icon_arrow_M})]})},getBorderColorOnHover=e=>e.error?"c_dropdownField_color_border_error":e.disabled?"c_dropdownField_color_border_disabled":e.readOnly?"c_dropdownField_color_border_readOnly":"c_dropdownField_color_border_hover",getBorderColor=(e,t)=>e.error?"c_dropdownField_color_border_error":t?"c_dropdownField_color_border_selected":e.disabled?"c_dropdownField_color_border_disabled":e.readOnly?"c_dropdownField_color_border_readOnly":"c_dropdownField_color_border_enabled",getBackgroundColor=(e,t,o)=>t.disabled?e.token.c_dropdownField_color_background_disabled:t.readOnly?e.token.c_dropdownField_color_background_readOnly:"ghost"===t.background?"transparent":t.error?e.token.c_dropdownField_color_background_error:o?e.token.c_dropdownField_color_background_selected:e.token.c_dropdownField_color_background_enabled,getCursorState=e=>e.disabled?"not-allowed":"pointer",getWidth=e=>"fixed"===e?"240px":"hug"===e?"fit-content":"100%",a=n.ZP.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  padding: ${({theme:e,figmaProps:t})=>e.token[`c_dropdownField_spacing_padding_${t.cancellable?"cancellable_"+t.size:"notCancellable_"+t.size}`]};
+
+  width: ${({figmaProps:e})=>getWidth(e.widthType)};
+  ${({figmaProps:e,theme:t})=>"newLine"!==e.textOverflow&&n.iv`
+      height: ${t.token[`c_dropdownField_size_height_${e.size}`]};
+    `};
+
+  border: ${({theme:e})=>e.token.c_dropdownField_borderWidth} solid
+    ${({theme:e,figmaProps:t,isSelected:o})=>e.token[getBorderColor(t,o)]};
+
+  border-radius: ${({theme:e,figmaProps:t})=>e.token[`c_dropdownField_radius_${t.size}`]};
+
+  background-color: ${({theme:e,figmaProps:t,isSelected:o})=>getBackgroundColor(e,t,o)};
+
+  ${({theme:e,figmaProps:t})=>e.mixin.hoverDesktopOnly(n.iv`
+      &:hover {
+        border-color: ${e.token[getBorderColorOnHover(t)]};
+        cursor: ${getCursorState(t)};
+      }
+    `)}
+`,_=n.ZP.div`
+  display: flex;
+  align-items: center;
+  margin-right: ${({theme:e,figmaProps:t})=>e.token[`c_dropdownField_spacing_itemGap_contents_${t.size}`]};
+  height: 100%;
+  gap: ${({theme:e,figmaProps:t})=>e.token[`c_dropdownField_spacing_itemGap_cancellable_${t.size}`]};
+`,s=n.ZP.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 90%;
+`,p=n.ZP.span`
+  ${({figmaProps:e})=>"ellipsis"===e.textOverflow?n.iv`
+          ${({theme:e})=>e.mixin.textOverflow()}
+        `:n.iv`
+          word-break: break-all;
+        `};
+
+  color: ${({theme:e,figmaProps:t})=>t.value?e.token[`c_dropdownField_color_contents_text_selectValue_${t.disabled?"disabled":"enabled"}`]:e.token[`c_dropdownField_color_contents_text_placeholder_${t.disabled?"disabled":"enabled"}`]};
+
+  font: ${({theme:e,figmaProps:t})=>e.token[`c_dropdownField_typography_${t.value?"selectValue":"placeholder"}_${t.size}`]};
+
+  margin-right: ${({theme:e})=>e.token.b_spacing_40};
+`},72975:function(e,t,o){o.d(t,{u:function(){return EmptyState}});var r=o(85893),n=o(88095),i=o(63967),d=o(54692);let getDefaultEmptyStateProps=e=>({graphicType:e.graphicType??"icon",iconName:e.iconName??"folder_add",title:e.title??"",subtitle:e.subtitle??"",maxWidth:e.maxWidth??"none",size:e.size??"M"}),EmptyState=e=>{let t=getDefaultEmptyStateProps(e),o=(0,n.Fg)();return(0,r.jsxs)(l,{figmaProps:t,children:[(0,r.jsx)(c,{figmaProps:t,children:"icon"===t.graphicType?(0,r.jsx)(d.J,{iconName:t.iconName,width:o.token[`c_emptyState_size_graphicArea_${t.size}`],height:o.token[`c_emptyState_size_graphicArea_${t.size}`],color:o.token.c_emptyState_color_contents_icon}):e.customImage??(0,r.jsx)(d.J,{iconName:t.iconName,width:o.token[`c_emptyState_size_graphicArea_${t.size}`],height:o.token[`c_emptyState_size_graphicArea_${t.size}`],color:o.token.c_emptyState_color_contents_icon})}),(0,r.jsxs)(a,{figmaProps:t,children:[(0,r.jsx)(_,{figmaProps:t,children:t.title}),t.subtitle&&(0,r.jsx)(s,{figmaProps:t,children:t.subtitle})]}),e.bottomButton&&(0,r.jsx)(p,{figmaProps:t,children:(0,r.jsx)(i.h,{direction:"horizontal",widthType:"hug",gap:"M",children:e.bottomButton})})]})},l=n.ZP.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: ${({theme:e,figmaProps:t})=>"none"===t.maxWidth?"unset":e.token[`c_emptyState_size_maxWidth_${t.maxWidth}`]};
+`,c=n.ZP.div`
+  margin-bottom: ${({theme:e,figmaProps:t})=>e.token[`c_emptyState_spacing_itemGap_graphic_${t.size}`]};
+`,a=n.ZP.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: ${({theme:e,figmaProps:t})=>e.token[`c_emptyState_spacing_itemGap_sentence_${t.size}`]};
+`,_=n.ZP.p`
+  word-break: break-all;
+  color: ${({theme:e})=>e.token.c_emptyState_color_contents_text_title};
+  font: ${({theme:e,figmaProps:t})=>e.token[`c_emptyState_typography_title_${t.size}`]};
+`,s=n.ZP.p`
+  white-space: pre-wrap;
+  color: ${({theme:e})=>e.token.c_emptyState_color_contents_text_sub};
+  font: ${({theme:e,figmaProps:t})=>e.token[`c_emptyState_typography_sub_${t.size}`]};
+`,p=n.ZP.div`
+  margin-top: ${({theme:e,figmaProps:t})=>e.token[`c_emptyState_spacing_itemGap_actionButton_${t.size}`]};
+  width: 100%;
+`},44771:function(e,t,o){o.d(t,{z:function(){return f}});var r=o(85893),n=o(67294),i=o(88095),d=o(40894),l=o(54051),c=o(95257),a=o(94771),_=o(25265),s=o(3101),p=o(80664);let h=(0,d.G)("InputTextArea",(e,t)=>{let o=(0,p.S)(e),i=(0,n.useRef)(null),[d,s]=(0,n.useState)(0),[h,k]=(0,n.useState)(0),[f,m]=(0,n.useState)(!1),{children:v,value:z,placeholder:F,showXButton:j,maxCount:S,onChange:C,onClick:P,onFocus:O,onBlur:T,onKeyDown:Z,onChangeValue:B,onClear:D,width:W,widthType:N,characterCount:E,type:M,inputMode:A,state:V,align:G,size:H,startIconName:I,right:R,autoComplete:J,heightType:X,height:L,className:U,style:q,...K}=e;n.Children.forEach(v,e=>{if(e?.type!==a.zx&&e?.type!==_.h)throw Error("여기서 허용된 children 타입이 아닙니다.")}),(0,n.useEffect)(()=>{if(!i.current)return;let e=(0,c.P)(e=>{s(e[0].target.clientWidth)},200),t=new ResizeObserver(e);return t.observe(i.current),()=>t.disconnect()},[i.current]);let Q=(0,n.useRef)(null);return(0,l.u)(t,{focus:e=>{Q.current?.focus(e)},blur:()=>{Q.current?.blur()}}),(0,n.useEffect)(()=>{if(!Q.current)return;let e=(0,c.P)(e=>{k(e[0].target.scrollHeight),m(e[0].target.clientHeight<e[0].target.scrollHeight)},100),t=new ResizeObserver(e);return t.observe(Q.current),()=>t.disconnect()},[Q.current]),(0,r.jsxs)(g,{figmaProps:o,children:[(0,r.jsx)(x,{ref:Q,style:{paddingRight:d>0?d+(f?0:8):"auto"},figmaProps:o,value:z,placeholder:F,readOnly:"readOnly"===o.state,disabled:"disabled"===o.state,onChange:e=>{C?.(e);let t=S?e.target.value.slice(0,S):e.target.value;B?.(t)},onClick:P,onFocus:O,onBlur:T,onKeyDown:Z,...K}),(0,r.jsxs)(b,{ref:i,children:[v,j&&z.length>0&&(0,r.jsx)(u,{onClick:e=>e.preventDefault(),children:(0,r.jsx)(_.h,{iconName:"close",onClick:D,size:"XS",type:"ghost",color:"black",shape:"round"})})]}),o.characterCount&&(0,r.jsx)(w,{children:(0,r.jsxs)($,{children:[0===z.length?"0":(0,r.jsx)(y,{children:z.length}),S&&`/${S}`]})})]})}),u=i.ZP.div`
+  display: none;
+`,g=i.ZP.div`
+  background-color: ${({theme:e,figmaProps:t})=>e.token[`c_input_color_background_${t.state}`]};
+  position: relative;
+  min-height: ${({theme:e,figmaProps:t})=>"fixed"===t.heightType&&t.height?t.height:e.token.b_size_static_200};
+
+  border: ${({theme:e})=>e.token.c_input_borderWidth} solid
+    ${({theme:e,figmaProps:t})=>e.token[`c_input_color_border_${t.state}`]};
+  border-radius: ${({theme:e,figmaProps:t})=>e.token[`c_input_radius_${t.size}`]};
+  ${({theme:e,figmaProps:t})=>!["readonly","disabled"].includes(t.state)&&e.mixin.hoverDesktopOnly(i.iv`
+      &:hover {
+        border: ${e.token.c_input_borderWidth} solid ${e.token.c_input_color_border_hover};
+        background-color: ${e.token.c_input_color_background_hover};
+      }
+    `)}
+
+  ${({figmaProps:e,theme:t})=>"enabled"===e.state&&i.iv`
+      &:focus-within {
+        border: ${t.token.c_input_borderWidth} solid ${t.token.c_input_color_border_focused};
+        background-color: ${t.token.c_input_color_background_focused};
+      }
+    `};
+
+  ${({figmaProps:e})=>"fixed"===e.heightType?i.iv`
+          height: ${({theme:t})=>e.height??t.token.b_size_static_200};
+        `:i.iv`
+          height: fit-content;
+        `}
+
+  ${({figmaProps:e})=>"fill"===e.widthType?i.iv`
+          width: 100%;
+        `:e.width&&i.iv`
+          width: ${e.width};
+        `}
+  
+  &:focus-within {
+    ${u} {
+      display: block;
+    }
+  }
+`,b=i.ZP.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  display: flex;
+  gap: ${({theme:e})=>e.token.b_spacing_40};
+`,k="30px",w=i.ZP.div`
+  position: absolute;
+
+  flex-shrink: 0;
+  height: ${{COUNT_SECTION_HEIGHT:k}};
+  bottom: 0;
+  right: 0;
+  padding: 5px 16px;
+`,$=i.ZP.div`
+  font: ${({theme:e})=>e.token.c_iconBadge_typography_M};
+  color: ${({theme:e})=>e.token.s_color_contents_weak};
+  user-select: none;
+`,y=i.ZP.span`
+  color: ${({theme:e})=>e.token.s_color_contents_additional};
+`,x=i.ZP.textarea`
+  ${s.k};
+  background-color: transparent;
+  overflow-y: ${({figmaProps:e})=>"hug"===e.heightType?"none":"auto"};
+
+  width: 100%;
+  height: ${({figmaProps:e,theme:t})=>"fixed"===e.heightType?e.characterCount&&`calc(100% - ${k})`||"100%":"auto"};
+
+  padding: 10px 0 10px 16px;
+  padding-bottom: ${({figmaProps:e})=>e.characterCount?`${k}`:"auto"};
+  color: ${({theme:e})=>e.token.c_input_color_contents_inputValue_enabled};
+
+  border: none;
+  &:focus-within {
+    border: none;
+    background-color: none;
+  }
+  &:hover {
+    border: none;
+    background-color: none;
+  }
+
+  font: ${({theme:e,figmaProps:t})=>e.token[`c_input_typography_inputValue_${t.size}`]};
+
+  &::placeholder {
+    color: ${({theme:e})=>e.token.c_input_color_contents_placeholder_enabled};
+    font: ${({theme:e,figmaProps:t})=>e.token[`c_input_typography_placeholder_${t.size}`]};
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 50%;
+    color: ${({theme:e})=>e.token.c_input_color_contents_inputValue_disabled};
+
+    &::placeholder {
+      color: ${({theme:e})=>e.token.c_input_color_contents_placeholder_disabled};
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: ${({theme:e})=>e.token.c_scrollView_radius_thumb};
+    background: ${({theme:e})=>e.token.c_scrollView_color_background_thumb};
+    background-clip: content-box;
+  }
+
+  ${({figmaProps:e})=>i.iv`
+      resize: none;
+    `}
+`,f=Object.assign(h,{Button:a.zx,IconButton:_.h})},80664:function(e,t,o){o.d(t,{S:function(){return getDefaultInputTextAreaProps}});var r=o(27111);let getDefaultInputTextAreaProps=e=>({...(0,r.U)(e),widthType:e.widthType??"fill",heightType:e.heightType??"fixed",characterCount:e.characterCount??!1,size:e.size??"M",height:e.height??null,width:e.width??null,showXButton:e.showXButton??!0})}}]);

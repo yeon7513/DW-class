@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', 'Noto Sans KR', sans-serif; color: #333;}
+
+/* border */
+.border {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+p {
+  padding: 10px;
+}
+
+#none {
+  border: none;
+}
+#dotted {
+  border: 5px dotted #000;
+}
+#dashed {
+  border: 5px dashed #000;
+}
+#solid {
+  border: 5px solid #000;
+}
+#double {
+  border: 5px double #000;
+}
+#groove {
+  border: 5px groove #000;
+}
+#ridge {
+  border: 5px ridge #000;
+}
+#inset {
+  border: 5px inset #000;
+}
+#outset {
+  border: 5px outset #000;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+section div {
+  box-sizing: border-box;
+}
+
+/* radius */
+section .radius {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px 0;
+}
+
+section .shadow {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: rosybrown;
+  box-shadow: 10px 10px 5px rgba(188, 143, 143, 0.3);
+  color: #fff;
+}
+
+section .shadow-inset {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(189, 183, 107, 0.3);
+  box-shadow: 0 0 20px darkkhaki inset;
+  color: green;
+
+}
