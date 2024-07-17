@@ -1,12 +1,11 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js';
 import {
-  getFirestore,
-  getDocs,
-  collection,
-  setDoc,
-  doc,
   addDoc,
+  collection,
   deleteDoc,
+  doc,
+  getDocs,
+  getFirestore,
   updateDoc,
 } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js';
 
@@ -53,4 +52,4 @@ async function updateDatas(collectionName, docId, updateInfoObj) {
   await updateDoc(docRef, updateInfoObj);
 }
 
-export { db, getDatas, addDatas, deleteDatas, updateDatas };
+export { addDatas, db, deleteDatas, getDatas, updateDatas };
